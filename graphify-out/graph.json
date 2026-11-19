@@ -10,8 +10,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "main",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "main.py"
     },
     {
@@ -21,8 +21,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "main_lifespan",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "lifespan()"
     },
     {
@@ -32,8 +32,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fastapi",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "fastapi"
     },
     {
@@ -43,8 +43,8 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "main_redirect_to_swagger",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "redirect_to_swagger()"
     },
     {
@@ -54,8 +54,8 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "main_health_check",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "health_check()"
     },
     {
@@ -65,8 +65,8 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "main_health_live",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "health_live()"
     },
     {
@@ -76,8 +76,8 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "main_health_ready",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "health_ready()"
     },
     {
@@ -87,8 +87,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "main_rationale_23",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "application lifespan context for startup and shutdown routines."
     },
     {
@@ -98,8 +98,8 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "main_rationale_114",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "redirect root path to interactive swagger documentation."
     },
     {
@@ -109,8 +109,8 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "main_rationale_120",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "health check endpoint to verify api server is alive."
     },
     {
@@ -274,8 +274,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_core_config",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "config.py"
     },
     {
@@ -285,8 +285,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_core_config_settings",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "settings"
     },
     {
@@ -296,8 +296,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_core_config_py_basemodel",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "basemodel"
     },
     {
@@ -307,8 +307,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_infrastructure_database_session",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "session.py"
     },
     {
@@ -318,8 +318,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_infrastructure_database_session_get_db_session",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "get_db_session()"
     },
     {
@@ -329,8 +329,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_infrastructure_database_session_py_session",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "session"
     },
     {
@@ -340,8 +340,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_infrastructure_database_session_init_db",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "init_db()"
     },
     {
@@ -351,8 +351,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_infrastructure_database_session_rationale_24",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "dependency that provides an active database session and ensures it closes."
     },
     {
@@ -362,8 +362,8 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_infrastructure_database_session_rationale_33",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "create all registered database tables."
     },
     {
@@ -1154,8 +1154,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_file_lookup_sqlalchemyfilelookup_get",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".get()"
     },
     {
@@ -1880,8 +1880,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "ports/job_repository.py"
     },
     {
@@ -1891,8 +1891,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrecord",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "jobrecord"
     },
     {
@@ -1902,8 +1902,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_py_protocol",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "protocol"
     },
     {
@@ -1913,8 +1913,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_resultrecord",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "resultrecord"
     },
     {
@@ -1924,8 +1924,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "jobrepository"
     },
     {
@@ -1935,8 +1935,8 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_create",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".create()"
     },
     {
@@ -1946,8 +1946,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_get",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".get()"
     },
     {
@@ -1957,8 +1957,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_claim",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".claim()"
     },
     {
@@ -1968,8 +1968,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_finish",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".finish()"
     },
     {
@@ -1979,8 +1979,8 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_result",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".result()"
     },
     {
@@ -1990,8 +1990,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_record_event",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".record_event()"
     },
     {
@@ -2001,8 +2001,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_events",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".events()"
     },
     {
@@ -2012,8 +2012,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_save_cdr",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".save_cdr()"
     },
     {
@@ -2023,8 +2023,8 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_job_repository_jobrepository_cdr",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".cdr()"
     },
     {
@@ -2221,8 +2221,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_extraction_application_use_cases_get_cdr_getcdr_handle",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": ".handle()"
     },
     {
@@ -2298,8 +2298,8 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_modules_extraction_application_use_cases_retry_extraction_retryextraction_init",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".__init__()"
     },
     {
@@ -2958,8 +2958,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_worker",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "worker.py"
     },
     {
@@ -2969,8 +2969,8 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_modules_extraction_worker_process_one",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "process_one()"
     },
     {
@@ -2980,8 +2980,8 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "src_modules_extraction_worker_main",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "main()"
     },
     {
@@ -2991,8 +2991,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_worker_rationale_1",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "durable database backed worker. launch separately from the api process."
     },
     {
@@ -3420,8 +3420,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_models",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "file_upload/adapters/outbound/persistence/models.py"
     },
     {
@@ -3453,8 +3453,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_models_rationale_1",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "models \u2014 sqlalchemy orm model for uploaded files table."
     },
     {
@@ -3464,8 +3464,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_recovery",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "recovery.py"
     },
     {
@@ -3475,8 +3475,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_recovery_reconcile_stale_uploads",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "reconcile_stale_uploads()"
     },
     {
@@ -3486,8 +3486,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_recovery_py_session",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "session"
     },
     {
@@ -3497,8 +3497,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_recovery_rationale_1",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "idempotent reconciliation of stale pending upload rows."
     },
     {
@@ -3992,8 +3992,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_init",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "ports/outbound/__init__.py"
     },
     {
@@ -4014,8 +4014,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "filerepositoryport"
     },
     {
@@ -4025,8 +4025,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_py_protocol",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "protocol"
     },
     {
@@ -4036,8 +4036,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport_save",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".save()"
     },
     {
@@ -4047,8 +4047,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport_update",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".update()"
     },
     {
@@ -4058,8 +4058,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport_get_by_id",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".get_by_id()"
     },
     {
@@ -4069,8 +4069,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport_list_all",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".list_all()"
     },
     {
@@ -4091,8 +4091,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_storage_port.py"
     },
     {
@@ -4102,8 +4102,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "filestorageport"
     },
     {
@@ -4113,8 +4113,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_py_protocol",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "protocol"
     },
     {
@@ -4124,8 +4124,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_build_destination_path",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".build_destination_path()"
     },
     {
@@ -4135,8 +4135,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_save_to_path",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".save_to_path()"
     },
     {
@@ -4146,8 +4146,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_py_binaryio",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "binaryio"
     },
     {
@@ -4157,8 +4157,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_delete",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".delete()"
     },
     {
@@ -4168,8 +4168,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_exists",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".exists()"
     },
     {
@@ -4179,8 +4179,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_1",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_storage_port \u2014 outbound port (interface) for physical file volume storage."
     },
     {
@@ -4190,8 +4190,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_9",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "pre-computes the target storage path before physical save."
     },
     {
@@ -4201,8 +4201,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_13",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "saves stream to the designated target path and returns total bytes written."
     },
     {
@@ -4212,8 +4212,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_17",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "removes physical file from storage."
     },
     {
@@ -4223,8 +4223,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_21",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "checks existence of file on storage."
     },
     {
@@ -4267,8 +4267,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file_getfile_init",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".__init__()"
     },
     {
@@ -4333,8 +4333,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_listfiles_init",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".__init__()"
     },
     {
@@ -4465,8 +4465,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_file_storage",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "get_file_storage()"
     },
     {
@@ -4476,8 +4476,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_file_repository",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "get_file_repository()"
     },
     {
@@ -4487,8 +4487,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_py_session",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "session"
     },
     {
@@ -4740,8 +4740,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_modules_file_upload_domain_model_uploaded_file_uploadedfile_post_init",
-      "community": 0,
-      "community_name": "CDR",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".__post_init__()"
     },
     {
@@ -5279,8 +5279,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_job_persistence",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "test_job_persistence.py"
     },
     {
@@ -5356,8 +5356,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_processing_trace",
-      "community": 0,
-      "community_name": "CDR",
+      "community": 10,
+      "community_name": "JobRepository",
       "norm_label": "test_processing_trace.py"
     },
     {
@@ -5367,8 +5367,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "tests_test_processing_trace_testprocessingtrace",
-      "community": 0,
-      "community_name": "CDR",
+      "community": 10,
+      "community_name": "JobRepository",
       "norm_label": "testprocessingtrace"
     },
     {
@@ -5378,8 +5378,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_processing_trace_testprocessingtrace_test_job_response_exposes_ordered_steps_models_and_source_text",
-      "community": 0,
-      "community_name": "CDR",
+      "community": 10,
+      "community_name": "JobRepository",
       "norm_label": ".test_job_response_exposes_ordered_steps_models_and_source_text()"
     },
     {
@@ -7273,6 +7273,83 @@
       "community": 54,
       "community_name": "Implementation status against Blueprint V1.0",
       "norm_label": "next release gates"
+    },
+    {
+      "label": "96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "file_type": "document",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e",
+      "community": 49,
+      "community_name": "Invoice extraction job analysis",
+      "norm_label": "96c0810b-2d85-4d2b-8ebf-34a303a8456e.md"
+    },
+    {
+      "label": "Invoice extraction job analysis",
+      "file_type": "document",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_invoice_extraction_job_analysis",
+      "community": 49,
+      "community_name": "Invoice extraction job analysis",
+      "norm_label": "invoice extraction job analysis"
+    },
+    {
+      "label": "Short answer: was an AI model used for OCR?",
+      "file_type": "document",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_short_answer_was_an_ai_model_used_for_ocr",
+      "community": 49,
+      "community_name": "Invoice extraction job analysis",
+      "norm_label": "short answer: was an ai model used for ocr?"
+    },
+    {
+      "label": "What happened, in order",
+      "file_type": "document",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_what_happened_in_order",
+      "community": 49,
+      "community_name": "Invoice extraction job analysis",
+      "norm_label": "what happened, in order"
+    },
+    {
+      "label": "Why `TOTAL_MISMATCH` occurred",
+      "file_type": "document",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_why_total_mismatch_occurred",
+      "community": 49,
+      "community_name": "Invoice extraction job analysis",
+      "norm_label": "why `total_mismatch` occurred"
+    },
+    {
+      "label": "What is stored and returned",
+      "file_type": "document",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_what_is_stored_and_returned",
+      "community": 49,
+      "community_name": "Invoice extraction job analysis",
+      "norm_label": "what is stored and returned"
+    },
+    {
+      "label": "Review decision",
+      "file_type": "document",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_review_decision",
+      "community": 49,
+      "community_name": "Invoice extraction job analysis",
+      "norm_label": "review decision"
     }
   ],
   "links": [
@@ -25219,8 +25296,74 @@
       "source": "docs_implementation_status_implementation_status_against_blueprint_v1_0",
       "target": "docs_implementation_status_verification",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e",
+      "target": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_invoice_extraction_job_analysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_invoice_extraction_job_analysis",
+      "target": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_review_decision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_invoice_extraction_job_analysis",
+      "target": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_short_answer_was_an_ai_model_used_for_ocr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_invoice_extraction_job_analysis",
+      "target": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_what_happened_in_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_invoice_extraction_job_analysis",
+      "target": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_what_is_stored_and_returned",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/job-reports/96c0810b-2d85-4d2b-8ebf-34a303a8456e.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_invoice_extraction_job_analysis",
+      "target": "docs_job_reports_96c0810b_2d85_4d2b_8ebf_34a303a8456e_why_total_mismatch_occurred",
+      "confidence_score": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8f3270215c7580071a3164f565b79c15ba860a3c"
+  "built_at_commit": "ec9032bf734c35aa0ea8b818576b9179952b740b"
 }

@@ -1,16 +1,16 @@
 # Graph Report - invoice-extract  (2026-11-19)
 
 ## Corpus Check
-- 96 files · ~27,357 words
+- 97 files · ~28,307 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 660 nodes · 1557 edges · 52 communities (50 shown, 2 thin omitted)
+- 667 nodes · 1563 edges · 53 communities (51 shown, 2 thin omitted)
 - Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 214 edges (avg confidence: 0.55)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8f327021`
+- Built from commit: `ec9032bf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -50,6 +50,7 @@
 - invoice-extract
 - Invoice extraction repository instructions
 - e2e_smoke.py
+- Invoice extraction job analysis
 - file_upload/config/module.py
 - Implementation status against Blueprint V1.0
 - ollama-model.sh
@@ -81,23 +82,23 @@
 ## Import Cycles
 - None detected.
 
-## Communities (52 total, 2 thin omitted)
+## Communities (53 total, 2 thin omitted)
 
 ### Community 0 - "CDR"
 Cohesion: 0.07
-Nodes (52): Decimal, LangChainExtractor, BaseChatModel, LLM adapter: source text is data and has no tools or execution privileges., Application orchestration; adapters are injected and graph nodes stay small., DocxReader, Path, ImageReader (+44 more)
+Nodes (51): Decimal, LangChainExtractor, BaseChatModel, LLM adapter: source text is data and has no tools or execution privileges., Application orchestration; adapters are injected and graph nodes stay small., DocxReader, Path, ImageReader (+43 more)
 
 ### Community 1 - "LangGraphProcessor"
 Cohesion: 0.33
 Nodes (4): LangGraphProcessor, Path, WorkflowState, TypedDict
 
 ### Community 2 - "UploadedFile"
-Cohesion: 0.08
-Nodes (30): Session, file_repository — SQLAlchemy persistence adapter implementing FileRepositoryPort, PostgreSQL adapter for file persistence., SqlAlchemyFileRepository, mappers — bidirectional mapping between ORM model and domain entity., to_domain(), to_model(), update_model() (+22 more)
+Cohesion: 0.07
+Nodes (32): Session, file_repository — SQLAlchemy persistence adapter implementing FileRepositoryPort, PostgreSQL adapter for file persistence., SqlAlchemyFileRepository, mappers — bidirectional mapping between ORM model and domain entity., to_domain(), to_model(), update_model() (+24 more)
 
 ### Community 3 - "SqlAlchemyJobRepository"
-Cohesion: 0.12
-Nodes (13): LangChainOCRCleaner, BaseChatModel, Optional low-confidence OCR correction; the raw OCR reading remains authoritativ, create_chat_model(), ModelConfig, BaseChatModel, Server-selected chat model adapters; no client request can choose a provider., LangChainVisionTranscriber (+5 more)
+Cohesion: 0.06
+Nodes (34): FastAPI, health_check(), lifespan(), Redirect root path to interactive Swagger documentation., Health check endpoint to verify API server is alive., Application lifespan context for startup and shutdown routines., redirect_to_swagger(), BaseModel (+26 more)
 
 ### Community 4 - "Invoice_Bill_Receipt_Extraction_Architecture_Blueprint.md"
 Cohesion: 0.13
@@ -124,8 +125,8 @@ Cohesion: 0.25
 Nodes (8): 6.1 Core principle, 6.2 Reader interface — logical, not code, 6.3 Proposed CDR v1 contract, 6.4 Minimum logical block types, 6.5 CDR partial-content policy, 6. Reader Abstraction and Common Document Representation (CDR), CDR design rules, Why CDR matters
 
 ### Community 10 - "JobRepository"
-Cohesion: 0.07
-Nodes (34): create_extraction(), CreateRequest, get_cdr(), get_extraction(), Options, BaseModel, HTTP adapter translating requests into application use cases., respond() (+26 more)
+Cohesion: 0.09
+Nodes (31): create_extraction(), CreateRequest, get_cdr(), get_extraction(), Options, BaseModel, HTTP adapter translating requests into application use cases., respond() (+23 more)
 
 ### Community 11 - "13. Normalization, Validation and Financial Controls"
 Cohesion: 0.29
@@ -144,8 +145,8 @@ Cohesion: 0.29
 Nodes (6): 📌 Available Endpoints in Swagger UI, Extraction pipeline, 📑 Invoice Extract API, 🚀 Running with Docker Compose, 🌐 Swagger UI & Interactive Documentation, 🧪 Testing File Upload via cURL
 
 ### Community 15 - ".save_to_path"
-Cohesion: 0.09
-Nodes (17): LocalDiskFileStorage, BinaryIO, Path, local_storage — physical volume storage adapter implementing FileStoragePort., Storage adapter persisting files to disk / mounted Docker volume., Pre-computes the target absolute path., Write and flush a sibling temporary file, then atomically rename., FileStoragePort (+9 more)
+Cohesion: 0.18
+Nodes (8): LocalDiskFileStorage, BinaryIO, Path, local_storage — physical volume storage adapter implementing FileStoragePort., Storage adapter persisting files to disk / mounted Docker volume., Pre-computes the target absolute path., Write and flush a sibling temporary file, then atomically rename., TestLocalStorage
 
 ### Community 16 - "11. Canonical Financial JSON Schema v1"
 Cohesion: 0.33
@@ -208,8 +209,8 @@ Cohesion: 0.50
 Nodes (4): Contents, Executive Summary, Full Architecture & Engineering Design Blueprint (V1.0), Invoice / Bill / Receipt Extraction Microservice
 
 ### Community 31 - ".save_to_path"
-Cohesion: 0.06
-Nodes (37): FastAPI, health_check(), lifespan(), Redirect root path to interactive Swagger documentation., Health check endpoint to verify API server is alive., Application lifespan context for startup and shutdown routines., redirect_to_swagger(), BaseModel (+29 more)
+Cohesion: 0.07
+Nodes (22): Session, SqlAlchemyJobRepository, ExtractionEventModel, ExtractionJobModel, ExtractionResultModel, ExtractionSourceModel, Base, A short-lived DB session per event keeps LangGraph nodes independent of the work (+14 more)
 
 ### Community 46 - "Invoice extraction repository instructions"
 Cohesion: 0.40
@@ -219,16 +220,20 @@ Nodes (4): Architecture, Graphify, Invoice extraction repository instructions, V
 Cohesion: 0.36
 Nodes (9): Client, Response, docx_bytes(), image_bytes(), main(), pdf_bytes(), process(), Run synthetic upload-to-result checks against a locally running API. (+1 more)
 
+### Community 49 - "Invoice extraction job analysis"
+Cohesion: 0.29
+Nodes (6): Invoice extraction job analysis, Review decision, Short answer: was an AI model used for OCR?, What happened, in order, What is stored and returned, Why `TOTAL_MISMATCH` occurred
+
 ### Community 51 - "file_upload/config/module.py"
 Cohesion: 0.06
-Nodes (53): mappers — transforms application view DTOs into REST response schemas., to_file_list_response(), to_file_response(), download_file(), get_file(), list_files(), router — HTTP REST inbound adapter exposing file upload and retrieval endpoints., upload_file() (+45 more)
+Nodes (58): mappers — transforms application view DTOs into REST response schemas., to_file_list_response(), to_file_response(), download_file(), get_file(), list_files(), router — HTTP REST inbound adapter exposing file upload and retrieval endpoints., upload_file() (+50 more)
 
 ### Community 54 - "Implementation status against Blueprint V1.0"
 Cohesion: 0.50
 Nodes (3): Implementation status against Blueprint V1.0, Next release gates, Verification
 
 ## Knowledge Gaps
-- **136 isolated node(s):** `invoice-extract`, `ollama-model.sh script`, `Architecture`, `Graphify`, `Verification` (+131 more)
+- **141 isolated node(s):** `invoice-extract`, `ollama-model.sh script`, `Architecture`, `Graphify`, `Verification` (+136 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -236,11 +241,11 @@ Nodes (3): Implementation status against Blueprint V1.0, Next release gates, Ver
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `CDR` connect `CDR` to `LangGraphProcessor`, `JobRepository`, `.save_to_path`?**
-  _High betweenness centrality (0.078) - this node is a cross-community bridge._
-- **Why does `UploadedFile` connect `UploadedFile` to `CDR`, `file_upload/config/module.py`?**
+  _High betweenness centrality (0.076) - this node is a cross-community bridge._
+- **Why does `UploadedFile` connect `UploadedFile` to `file_upload/config/module.py`?**
   _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Why does `UploadedFileModel` connect `UploadedFile` to `CDR`, `JobRepository`, `.save_to_path`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Why does `UploadedFileModel` connect `UploadedFile` to `CDR`, `JobRepository`, `SqlAlchemyJobRepository`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **Are the 25 inferred relationships involving `CDR` (e.g. with `CreateRequest` and `Options`) actually correct?**
   _`CDR` has 25 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `UploadedFile` (e.g. with `SqlAlchemyFileRepository` and `FileRepositoryPort`) actually correct?**
