@@ -23,6 +23,7 @@ class Settings(BaseModel):
     ANTHROPIC_API_KEY: str = os.getenv("ANTHROPIC_API_KEY", "")
     OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://ollama:11434")
     EXTRACTION_MODEL: str = os.getenv("EXTRACTION_MODEL", "")
+    VISION_PROVIDER: Literal["", "openai", "anthropic", "ollama"] = os.getenv("VISION_PROVIDER", "").strip().lower()
     VISION_MODEL: str = os.getenv("VISION_MODEL", "")
     ENABLE_VISION_FALLBACK: bool = os.getenv("ENABLE_VISION_FALLBACK", "true").lower() == "true"
     OCR_LANGUAGES: str = os.getenv("OCR_LANGUAGES", "eng")

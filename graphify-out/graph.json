@@ -32,8 +32,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fastapi",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "fastapi"
     },
     {
@@ -516,8 +516,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_provider_factory",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "provider_factory.py"
     },
     {
@@ -527,8 +527,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "modelconfig"
     },
     {
@@ -538,8 +538,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig_resolved_model",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".resolved_model()"
     },
     {
@@ -549,8 +549,8 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig_ready",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".ready()"
     },
     {
@@ -560,8 +560,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "create_chat_model()"
     },
     {
@@ -571,8 +571,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_py_basechatmodel",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "basechatmodel"
     },
     {
@@ -582,8 +582,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_rationale_1",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "server-selected chat model adapters; no client request can choose a provider."
     },
     {
@@ -593,8 +593,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "vision_transcriber.py"
     },
     {
@@ -604,8 +604,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "langchainvisiontranscriber"
     },
     {
@@ -615,8 +615,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber_init",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".__init__()"
     },
     {
@@ -626,8 +626,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_py_basechatmodel",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "basechatmodel"
     },
     {
@@ -637,8 +637,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber_transcribe",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".transcribe()"
     },
     {
@@ -648,8 +648,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_py_image",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "image"
     },
     {
@@ -659,8 +659,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_rationale_1",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "bounded vision transcription fallback for unreadable raster pages."
     },
     {
@@ -978,8 +978,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "persistence/job_repository.py"
     },
     {
@@ -989,8 +989,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_sqlalchemyjobrepository",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "sqlalchemyjobrepository"
     },
     {
@@ -1000,8 +1000,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_sqlalchemyjobrepository_init",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".__init__()"
     },
     {
@@ -1011,8 +1011,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_py_session",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "session"
     },
     {
@@ -1022,8 +1022,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_sqlalchemyjobrepository_create",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".create()"
     },
     {
@@ -1033,8 +1033,8 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_sqlalchemyjobrepository_get",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".get()"
     },
     {
@@ -1044,8 +1044,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_sqlalchemyjobrepository_claim",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".claim()"
     },
     {
@@ -1055,8 +1055,8 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_sqlalchemyjobrepository_stage",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".stage()"
     },
     {
@@ -1066,8 +1066,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_sqlalchemyjobrepository_finish",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".finish()"
     },
     {
@@ -1077,8 +1077,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_job_repository_sqlalchemyjobrepository_result",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".result()"
     },
     {
@@ -1088,8 +1088,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_models",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "extraction/adapters/outbound/persistence/models.py"
     },
     {
@@ -1099,8 +1099,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_models_now",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "now()"
     },
     {
@@ -1110,8 +1110,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_models_extractionjobmodel",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "extractionjobmodel"
     },
     {
@@ -1121,8 +1121,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_models_py_base",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "base"
     },
     {
@@ -1132,8 +1132,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_persistence_models_extractionresultmodel",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "extractionresultmodel"
     },
     {
@@ -1429,8 +1429,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_artifact_store",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "artifact_store.py"
     },
     {
@@ -1968,15 +1968,15 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_build_process_job",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "build_process_job()"
     },
     {
       "label": "get_submit_extraction()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L46",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_get_submit_extraction",
       "community": 10,
@@ -1998,7 +1998,7 @@
       "label": "get_get_extraction()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L50",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_get_get_extraction",
       "community": 10,
@@ -2009,7 +2009,7 @@
       "label": "get_retry_extraction()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L54",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_get_retry_extraction",
       "community": 10,
@@ -2020,7 +2020,7 @@
       "label": "get_get_cdr()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L58",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_get_get_cdr",
       "community": 10,
@@ -2408,8 +2408,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_domain_job",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "job.py"
     },
     {
@@ -2419,8 +2419,8 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_modules_extraction_domain_job_jobstatus",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "jobstatus"
     },
     {
@@ -2430,8 +2430,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_domain_job_py_str",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "str"
     },
     {
@@ -2441,8 +2441,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_domain_job_py_enum",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "enum"
     },
     {
@@ -2452,8 +2452,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_modules_extraction_domain_job_ensure_transition",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "ensure_transition()"
     },
     {
@@ -2463,8 +2463,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_domain_job_rationale_1",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "extraction job lifecycle invariants, separate from upload status."
     },
     {
@@ -2507,8 +2507,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_modules_extraction_worker_process_one",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "process_one()"
     },
     {
@@ -2584,8 +2584,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_upload/adapters/inbound/rest/router.py"
     },
     {
@@ -2595,7 +2595,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router_upload_file",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "upload_file()"
     },
@@ -2606,8 +2606,8 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router_get_file",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "get_file()"
     },
     {
@@ -2617,8 +2617,8 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router_list_files",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "list_files()"
     },
     {
@@ -2628,8 +2628,8 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router_download_file",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "download_file()"
     },
     {
@@ -2639,8 +2639,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router_rationale_1",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "router \u2014 http rest inbound adapter exposing file upload and retrieval endpoints."
     },
     {
@@ -2650,8 +2650,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_schemas_responses",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "responses.py"
     },
     {
@@ -2661,8 +2661,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_schemas_responses_fileuploadresponse",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "fileuploadresponse"
     },
     {
@@ -2672,8 +2672,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_schemas_responses_py_basemodel",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "basemodel"
     },
     {
@@ -2683,8 +2683,8 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_schemas_responses_filelistresponse",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "filelistresponse"
     },
     {
@@ -2694,8 +2694,8 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_schemas_responses_errordetail",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "errordetail"
     },
     {
@@ -2705,8 +2705,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_schemas_responses_rationale_1",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "responses \u2014 http rest response schemas with openapi / swagger documentation meta"
     },
     {
@@ -2716,8 +2716,8 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_schemas_responses_rationale_109",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "standardized error response model for openapi / swagger."
     },
     {
@@ -2793,8 +2793,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "file_repository.py"
     },
     {
@@ -2804,8 +2804,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "sqlalchemyfilerepository"
     },
     {
@@ -2815,8 +2815,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_init",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".__init__()"
     },
     {
@@ -2826,8 +2826,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_py_session",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "session"
     },
     {
@@ -2837,8 +2837,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_save",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".save()"
     },
     {
@@ -2848,8 +2848,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_update",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".update()"
     },
     {
@@ -2859,8 +2859,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_get_by_id",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".get_by_id()"
     },
     {
@@ -2870,8 +2870,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_list_all",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".list_all()"
     },
     {
@@ -2881,8 +2881,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_rationale_1",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "file_repository \u2014 sqlalchemy persistence adapter implementing filerepositoryport"
     },
     {
@@ -2892,8 +2892,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_rationale_13",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "postgresql adapter for file persistence."
     },
     {
@@ -2903,8 +2903,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "persistence/mappers.py"
     },
     {
@@ -2914,8 +2914,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers_to_domain",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "to_domain()"
     },
     {
@@ -2925,8 +2925,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers_to_model",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "to_model()"
     },
     {
@@ -2936,8 +2936,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers_update_model",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "update_model()"
     },
     {
@@ -2947,8 +2947,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers_rationale_1",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "mappers \u2014 bidirectional mapping between orm model and domain entity."
     },
     {
@@ -2969,8 +2969,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_models_uploadedfilemodel",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "uploadedfilemodel"
     },
     {
@@ -2980,8 +2980,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_models_py_base",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "base"
     },
     {
@@ -3200,7 +3200,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_commands",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "commands.py"
     },
@@ -3211,7 +3211,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_commands_uploadfileinput",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "uploadfileinput"
     },
@@ -3222,7 +3222,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_commands_rationale_1",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "commands \u2014 application input dtos for state mutations."
     },
@@ -3233,7 +3233,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_commands_rationale_10",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "input payload to upload a new file."
     },
@@ -3255,8 +3255,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_queries_getfileinput",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "getfileinput"
     },
     {
@@ -3288,8 +3288,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_queries_rationale_9",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "input query to fetch file by id."
     },
     {
@@ -3354,7 +3354,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_init",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "ports/inbound/__init__.py"
     },
@@ -3376,8 +3376,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_get_file_getfilequery",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "getfilequery"
     },
     {
@@ -3387,8 +3387,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_get_file_py_protocol",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "protocol"
     },
     {
@@ -3398,8 +3398,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_get_file_getfilequery_handle",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".handle()"
     },
     {
@@ -3475,7 +3475,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_upload_file",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "inbound/upload_file.py"
     },
@@ -3486,7 +3486,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_upload_file_uploadfileusecase",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "uploadfileusecase"
     },
@@ -3497,7 +3497,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_upload_file_py_protocol",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "protocol"
     },
@@ -3508,7 +3508,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_upload_file_uploadfileusecase_handle",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": ".handle()"
     },
@@ -3519,7 +3519,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_upload_file_rationale_1",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "upload_file \u2014 inbound port (interface) for uploading files."
     },
@@ -3530,8 +3530,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_init",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "ports/outbound/__init__.py"
     },
     {
@@ -3541,8 +3541,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_repository_port.py"
     },
     {
@@ -3552,8 +3552,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "filerepositoryport"
     },
     {
@@ -3563,8 +3563,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_py_protocol",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "protocol"
     },
     {
@@ -3574,8 +3574,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport_save",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".save()"
     },
     {
@@ -3585,8 +3585,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport_update",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".update()"
     },
     {
@@ -3596,8 +3596,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport_get_by_id",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".get_by_id()"
     },
     {
@@ -3607,8 +3607,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_filerepositoryport_list_all",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".list_all()"
     },
     {
@@ -3618,8 +3618,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_rationale_1",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_repository_port \u2014 outbound port (interface) for file persistence."
     },
     {
@@ -3629,8 +3629,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_storage_port.py"
     },
     {
@@ -3640,8 +3640,8 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "filestorageport"
     },
     {
@@ -3651,8 +3651,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_py_protocol",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "protocol"
     },
     {
@@ -3662,8 +3662,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_build_destination_path",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".build_destination_path()"
     },
     {
@@ -3673,8 +3673,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_save_to_path",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".save_to_path()"
     },
     {
@@ -3684,8 +3684,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_py_binaryio",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "binaryio"
     },
     {
@@ -3695,8 +3695,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_delete",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".delete()"
     },
     {
@@ -3706,8 +3706,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_exists",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".exists()"
     },
     {
@@ -3717,8 +3717,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_1",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_storage_port \u2014 outbound port (interface) for physical file volume storage."
     },
     {
@@ -3728,8 +3728,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_9",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "pre-computes the target storage path before physical save."
     },
     {
@@ -3739,8 +3739,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_13",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "saves stream to the designated target path and returns total bytes written."
     },
     {
@@ -3750,8 +3750,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_17",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "removes physical file from storage."
     },
     {
@@ -3761,8 +3761,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_21",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "checks existence of file on storage."
     },
     {
@@ -3772,8 +3772,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_init",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_upload/application/use_cases/__init__.py"
     },
     {
@@ -3783,8 +3783,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "use_cases/get_file.py"
     },
     {
@@ -3794,8 +3794,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file_getfile",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "getfile"
     },
     {
@@ -3805,8 +3805,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file_getfile_init",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".__init__()"
     },
     {
@@ -3816,8 +3816,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file_getfile_handle",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".handle()"
     },
     {
@@ -3827,8 +3827,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file_rationale_1",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "get_file \u2014 use case for retrieving a single file view."
     },
     {
@@ -3838,8 +3838,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file_rationale_11",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "implements getfilequery inbound port."
     },
     {
@@ -3849,8 +3849,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "use_cases/list_files.py"
     },
     {
@@ -3860,8 +3860,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_listfiles",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "listfiles"
     },
     {
@@ -3871,8 +3871,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_listfiles_init",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".__init__()"
     },
     {
@@ -3893,8 +3893,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_rationale_1",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "list_files \u2014 use case for retrieving paginated file views."
     },
     {
@@ -3904,8 +3904,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_rationale_11",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "implements listfilesquery inbound port."
     },
     {
@@ -3915,8 +3915,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "use_cases/upload_file.py"
     },
     {
@@ -3926,8 +3926,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_to_view",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "_to_view()"
     },
     {
@@ -3937,7 +3937,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_uploadfile",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "uploadfile"
     },
@@ -3948,8 +3948,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_uploadfile_init",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".__init__()"
     },
     {
@@ -3959,7 +3959,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_uploadfile_handle",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": ".handle()"
     },
@@ -3970,8 +3970,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_rationale_1",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "upload_file \u2014 use case coordinating the upload lifecycle."
     },
     {
@@ -3981,7 +3981,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_rationale_35",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "implements uploadfileusecase inbound port."
     },
@@ -3992,8 +3992,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "file_upload/config/module.py"
     },
     {
@@ -4003,8 +4003,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_file_storage",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "get_file_storage()"
     },
     {
@@ -4014,8 +4014,8 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_file_repository",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "get_file_repository()"
     },
     {
@@ -4025,8 +4025,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_py_session",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "session"
     },
     {
@@ -4036,8 +4036,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_upload_file_use_case",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "get_upload_file_use_case()"
     },
     {
@@ -4047,8 +4047,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_get_file_query",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "get_get_file_query()"
     },
     {
@@ -4058,8 +4058,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_list_files_query",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "get_list_files_query()"
     },
     {
@@ -4069,8 +4069,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_rationale_1",
-      "community": 52,
-      "community_name": "FileRepositoryPort",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "module \u2014 wires the file_upload module's ports, adapters, and use cases."
     },
     {
@@ -4267,8 +4267,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_modules_file_upload_domain_model_uploaded_file_uploadedfile",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "uploadedfile"
     },
     {
@@ -4278,8 +4278,8 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "src_modules_file_upload_domain_model_uploaded_file_uploadedfile_post_init",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".__post_init__()"
     },
     {
@@ -4322,8 +4322,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_modules_file_upload_domain_model_uploaded_file_rationale_19",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "uploadedfile aggregate root.     encapsulates lifecycle rules and business invar"
     },
     {
@@ -4355,75 +4355,86 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_ai_providers",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "test_ai_providers.py"
     },
     {
       "label": "TestProviderFactory",
       "file_type": "code",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L8",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "tests_test_ai_providers_testproviderfactory",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": "testproviderfactory"
     },
     {
       "label": ".test_provider_defaults_and_credentials()",
       "file_type": "code",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L9",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_ai_providers_testproviderfactory_test_provider_defaults_and_credentials",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".test_provider_defaults_and_credentials()"
     },
     {
       "label": ".test_claude_uses_anthropic_adapter()",
       "file_type": "code",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L18",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "tests_test_ai_providers_testproviderfactory_test_claude_uses_anthropic_adapter",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".test_claude_uses_anthropic_adapter()"
     },
     {
       "label": ".test_ollama_uses_local_endpoint()",
       "file_type": "code",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L24",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "tests_test_ai_providers_testproviderfactory_test_ollama_uses_local_endpoint",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".test_ollama_uses_local_endpoint()"
     },
     {
       "label": ".test_openai_still_supported()",
       "file_type": "code",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L29",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "tests_test_ai_providers_testproviderfactory_test_openai_still_supported",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".test_openai_still_supported()"
     },
     {
       "label": ".test_vision_image_block_matches_provider()",
       "file_type": "code",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "tests_test_ai_providers_testproviderfactory_test_vision_image_block_matches_provider",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
       "norm_label": ".test_vision_image_block_matches_provider()"
+    },
+    {
+      "label": ".test_vision_can_use_a_different_provider_and_key()",
+      "file_type": "code",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "tests_test_ai_providers_testproviderfactory_test_vision_can_use_a_different_provider_and_key",
+      "community": 3,
+      "community_name": "SqlAlchemyJobRepository",
+      "norm_label": ".test_vision_can_use_a_different_provider_and_key()"
     },
     {
       "label": "test_extraction.py",
@@ -4619,8 +4630,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_extraction_use_cases_testextractionusecases_test_job_lifecycle_rejects_terminal_transition",
-      "community": 10,
-      "community_name": "JobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".test_job_lifecycle_rejects_terminal_transition()"
     },
     {
@@ -4674,8 +4685,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": "testfileuploadhexagonal"
     },
     {
@@ -4685,8 +4696,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_initial_status_is_pending_with_path",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".test_entity_initial_status_is_pending_with_path()"
     },
     {
@@ -4696,8 +4707,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_empty_name_raises",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".test_entity_empty_name_raises()"
     },
     {
@@ -4707,8 +4718,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_empty_path_raises",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".test_entity_empty_path_raises()"
     },
     {
@@ -4718,8 +4729,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_mark_as_success",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".test_entity_mark_as_success()"
     },
     {
@@ -4729,8 +4740,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_invalid_status_transition",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 2,
+      "community_name": "UploadedFile",
       "norm_label": ".test_entity_invalid_status_transition()"
     },
     {
@@ -4740,7 +4751,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_upload_file_use_case_pre_records_path_in_pending_status",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": ".test_upload_file_use_case_pre_records_path_in_pending_status()"
     },
@@ -4751,7 +4762,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_upload_file_use_case_failure_flow",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": ".test_upload_file_use_case_failure_flow()"
     },
@@ -4762,8 +4773,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "tests_test_job_persistence",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "test_job_persistence.py"
     },
     {
@@ -4773,8 +4784,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_job_persistence_testjobpersistence",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "testjobpersistence"
     },
     {
@@ -4784,8 +4795,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "tests_test_job_persistence_testjobpersistence_test_job_claim_result_and_idempotency",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": ".test_job_claim_result_and_idempotency()"
     },
     {
@@ -7935,7 +7946,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L41",
+      "source_location": "L45",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -7947,7 +7958,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L42",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -8100,7 +8111,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers",
@@ -8194,7 +8205,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers",
@@ -8205,7 +8216,7 @@
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 0.8,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory",
@@ -8218,7 +8229,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory_test_claude_uses_anthropic_adapter",
@@ -8230,7 +8241,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory_test_ollama_uses_local_endpoint",
@@ -8242,7 +8253,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L30",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory_test_openai_still_supported",
@@ -8254,7 +8265,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L10",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory_test_provider_defaults_and_credentials",
@@ -8313,7 +8324,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers",
@@ -8326,7 +8337,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory_test_claude_uses_anthropic_adapter",
@@ -8338,7 +8349,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory_test_ollama_uses_local_endpoint",
@@ -8350,7 +8361,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L30",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory_test_openai_still_supported",
@@ -8383,7 +8394,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers",
@@ -8429,7 +8440,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L35",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -8441,7 +8452,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers",
@@ -8452,7 +8463,7 @@
       "relation": "uses",
       "confidence": "INFERRED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 0.8,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory",
@@ -8465,7 +8476,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory_test_vision_image_block_matches_provider",
@@ -9335,7 +9346,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L59",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_cdr",
@@ -9511,7 +9522,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L47",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_submit_extraction",
@@ -9777,7 +9788,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L59",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_cdr",
@@ -9789,7 +9800,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L51",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_extraction",
@@ -9801,7 +9812,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L55",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_retry_extraction",
@@ -9813,7 +9824,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L47",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_submit_extraction",
@@ -10408,7 +10419,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L38",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -10793,7 +10804,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L37",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -11187,7 +11198,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L36",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -11537,7 +11548,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L39",
+      "source_location": "L43",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -12709,7 +12720,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L58",
+      "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_cdr",
@@ -12837,7 +12848,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L50",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_extraction",
@@ -12965,7 +12976,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L54",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_retry_extraction",
@@ -13128,7 +13139,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L46",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_submit_extraction",
@@ -13209,7 +13220,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L58",
+      "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -13220,7 +13231,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L50",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -13231,7 +13242,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L54",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -13242,7 +13253,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L46",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -13258,6 +13269,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker",
+      "target": "src_modules_extraction_config_module",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers",
       "target": "src_modules_extraction_config_module",
       "confidence_score": 1.0
     },
@@ -13286,11 +13309,35 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers",
+      "target": "src_modules_extraction_config_module_build_process_job",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_vision_can_use_a_different_provider_and_key",
+      "target": "src_modules_extraction_config_module_build_process_job"
+    },
+    {
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L46",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_submit_extraction",
@@ -13302,7 +13349,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L58",
+      "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_cdr",
@@ -13314,7 +13361,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L50",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_extraction",
@@ -13326,7 +13373,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L54",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_retry_extraction",
@@ -20037,7 +20084,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L8",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers",
@@ -20048,7 +20095,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory",
@@ -20059,7 +20106,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory",
@@ -20070,7 +20117,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L29",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory",
@@ -20081,7 +20128,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory",
@@ -20092,7 +20139,18 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "tests/test_ai_providers.py",
-      "source_location": "L33",
+      "source_location": "L49",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory",
+      "target": "tests_test_ai_providers_testproviderfactory_test_vision_can_use_a_different_provider_and_key",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "tests_test_ai_providers_testproviderfactory",
@@ -22385,5 +22443,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b5518cbd3de609746c0032ffb858fc52d24155f7"
+  "built_at_commit": "b4da370b4f330aaa4270e5c107ce00cd633d90d0"
 }

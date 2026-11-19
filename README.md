@@ -14,7 +14,7 @@ Select the AI provider in `.env`; the worker reads the selector when it starts. 
 | Claude | `LLM_PROVIDER=anthropic`, paste `ANTHROPIC_API_KEY` | `claude-haiku-4-5-20251001` |
 | Ollama | `LLM_PROVIDER=ollama`; no API key | `gemma3:4b` |
 
-Leave `EXTRACTION_MODEL=` blank for the selected provider default, or set an exact model name. `VISION_MODEL=` defaults to the extraction model. If you choose a text-only Ollama model, set `VISION_MODEL=gemma3:4b` and pull both models, or set `ENABLE_VISION_FALLBACK=false`. Restart the worker after changing `.env` with `docker compose up -d --force-recreate worker`. Keep API keys in the ignored `.env` file; do not commit them.
+Leave `EXTRACTION_MODEL=` blank for the selected provider default, or set an exact model name. `VISION_PROVIDER=` defaults to `LLM_PROVIDER`; set it to `openai`, `anthropic`, or `ollama` to use a different provider for OCR vision fallback. `VISION_MODEL=` defaults to the extraction model when providers match, or the vision provider's default when they differ. The worker reads the corresponding provider key from `OPENAI_API_KEY` or `ANTHROPIC_API_KEY`; Ollama needs its model pulled locally. For example, use `LLM_PROVIDER=anthropic`, `VISION_PROVIDER=openai`, and both provider keys to extract with Claude and read difficult images with OpenAI vision. If you choose a text-only Ollama extraction model, set `VISION_PROVIDER=ollama`, `VISION_MODEL=gemma3:4b` and pull both models, or set `ENABLE_VISION_FALLBACK=false`. Restart the worker after changing `.env` with `docker compose up -d --force-recreate worker`. Keep API keys in the ignored `.env` file; do not commit them.
 
 For local Ollama, start its Docker service and pull the default model into the persistent `ollama_models` volume:
 

@@ -1,8 +1,10 @@
 import unittest
+from pathlib import Path
 from unittest.mock import Mock, patch
 from PIL import Image
 from src.modules.extraction.adapters.outbound.ai.provider_factory import ModelConfig, create_chat_model
 from src.modules.extraction.adapters.outbound.ai.vision_transcriber import LangChainVisionTranscriber
+from src.modules.extraction.config.module import build_process_job
 
 
 class TestProviderFactory(unittest.TestCase):
@@ -41,3 +43,31 @@ class TestProviderFactory(unittest.TestCase):
             self.assertEqual(block["type"], expected_type)
             if provider == "ollama":
                 self.assertIsInstance(block["image_url"], str)
+
+    @patch("src.modules.extraction.config.module.create_chat_model")
+    @patch("src.modules.extraction.config.module.settings")
+    def test_vision_can_use_a_different_provider_and_key(self, settings, create_model):
+        settings.LLM_PROVIDER = "anthropic"
+        settings.EXTRACTION_MODEL = "claude-test"
+        settings.VISION_PROVIDER = "openai"
+        settings.VISION_MODEL = "gpt-vision-test"
+        settings.ANTHROPIC_API_KEY = "claude-key"
+        settings.OPENAI_API_KEY = "vision-key"
+        settings.OLLAMA_BASE_URL = "http://ollama:11434"
+        settings.ENABLE_VISION_FALLBACK = True
+        settings.OCR_LANGUAGES = "eng"
+        settings.MAX_IMAGE_PIXELS = 40_000_000
+        settings.MAX_PDF_PAGES = 20
+        settings.ARTIFACT_DIR = Path("/tmp/artifacts")
+        extraction_model, vision_model = Mock(), Mock()
+        create_model.side_effect = [extraction_model, vision_model]
+
+        processor = build_process_job()
+
+        extraction_config = create_model.call_args_list[0].args[0]
+        vision_config = create_model.call_args_list[1].args[0]
+        self.assertEqual((extraction_config.provider, extraction_config.resolved_model), ("anthropic", "claude-test"))
+        self.assertEqual((vision_config.provider, vision_config.resolved_model), ("openai", "gpt-vision-test"))
+        self.assertEqual(vision_config.openai_api_key, "vision-key")
+        self.assertIs(processor.readers[".png"].ocr.vision.model, vision_model)
+        self.assertEqual(processor.readers[".png"].ocr.vision.provider, "openai")

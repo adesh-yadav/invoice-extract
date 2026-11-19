@@ -10,8 +10,8 @@
     "semantic_hash": ""
   },
   "src/core/config.py": {
-    "mtime": 1795083421.209336,
-    "ast_hash": "ed3daed7993ebed49c4bc6e53168e943",
+    "mtime": 1795085154.4877825,
+    "ast_hash": "bc35cd373f6e74031eafad73ceb60a48",
     "semantic_hash": ""
   },
   "src/infrastructure/database/session.py": {
@@ -145,8 +145,8 @@
     "semantic_hash": ""
   },
   "src/modules/extraction/config/module.py": {
-    "mtime": 1795083553.6518176,
-    "ast_hash": "f8accee2dcc93f853aad9cfd30928280",
+    "mtime": 1795085154.4887824,
+    "ast_hash": "beeb58182e8a6b0487708e2c5a3ba060",
     "semantic_hash": ""
   },
   "src/modules/extraction/domain/__init__.py": {
@@ -330,13 +330,13 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1795083664.8229008,
-    "ast_hash": "aca2091fb4b8c290cbd9647140343cf1",
+    "mtime": 1795085154.4907825,
+    "ast_hash": "876e84d55bdf3d7ccbbab7623b9738e8",
     "semantic_hash": ""
   },
   "docker-compose.yml": {
-    "mtime": 1795083574.4622076,
-    "ast_hash": "2c4e617ad2c5aa92660bc451145bc408",
+    "mtime": 1795085154.4897823,
+    "ast_hash": "dc74bddeb81f602f1f2c207fec50d7b1",
     "semantic_hash": ""
   },
   "requirements.txt": {
@@ -440,8 +440,8 @@
     "semantic_hash": ""
   },
   "docs/IMPLEMENTATION_STATUS.md": {
-    "mtime": 1795083950.8242598,
-    "ast_hash": "f013b566c29f8f8f6ac9e1e88a61ea1d",
+    "mtime": 1795083979.063789,
+    "ast_hash": "09b98d4e4600f4b33efc3d888e793a51",
     "semantic_hash": ""
   },
   "scripts/ollama-model.sh": {
@@ -455,8 +455,8 @@
     "semantic_hash": ""
   },
   "tests/test_ai_providers.py": {
-    "mtime": 1795083621.6300914,
-    "ast_hash": "bcbc080ddd5e3e64872a9b5bdd069223",
+    "mtime": 1795085482.0627303,
+    "ast_hash": "a0251c2c36ea1aefaba0299443f167d5",
     "semantic_hash": ""
   }
 }

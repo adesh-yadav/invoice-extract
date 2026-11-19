@@ -29,10 +29,14 @@ def build_process_job(extractor=None) -> LangGraphProcessor:
     )
     chat_model = create_chat_model(model_config) if model_config.ready else None
     vision = None
-    if chat_model is not None and settings.ENABLE_VISION_FALLBACK:
+    if settings.ENABLE_VISION_FALLBACK:
         from src.modules.extraction.adapters.outbound.ai.vision_transcriber import LangChainVisionTranscriber
-        vision_model = create_chat_model(replace(model_config, model=settings.VISION_MODEL)) if settings.VISION_MODEL else chat_model
-        vision = LangChainVisionTranscriber(vision_model, settings.LLM_PROVIDER)
+        vision_provider = settings.VISION_PROVIDER or model_config.provider
+        vision_model_name = settings.VISION_MODEL or (model_config.model if vision_provider == model_config.provider else "")
+        vision_config = replace(model_config, provider=vision_provider, model=vision_model_name)
+        if vision_config.ready:
+            vision_model = chat_model if vision_config == model_config else create_chat_model(vision_config)
+            vision = LangChainVisionTranscriber(vision_model, vision_config.provider)
     ocr = TesseractOCR(languages=settings.OCR_LANGUAGES, vision=vision, max_pixels=settings.MAX_IMAGE_PIXELS)
     image = ImageReader(ocr)
     docx = DocxReader(ocr)
