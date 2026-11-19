@@ -1,5 +1,19 @@
 # 📑 Invoice Extract API
 
+## Local document workspace
+
+Start the existing Docker stack and open [http://localhost:8000/app](http://localhost:8000/app). This dashboard is served by the FastAPI container; no separate frontend service, Node runtime, or extra setup is required. The root URL also opens the dashboard. Swagger remains at [http://localhost:8000/docs](http://localhost:8000/docs).
+
+Upload a PDF, DOCX, PNG, or JPEG (up to the configured 25 MB default). Upload automatically queues extraction in the worker. The dashboard polls the job and displays status, readable text, extracted financial fields when applicable, validation issues, evidence, models actually used, the full source blocks and tables by page, and every recorded processing step. PDF and image originals can be previewed; every original can be downloaded. The Raw JSON tab shows the complete API response. You can reopen a result by job ID or from this browser's recent list. A job URL such as `/app?job=YOUR_JOB_ID` can be bookmarked.
+
+### Text from any supported document
+
+`GET /v1/extractions/{job_id}` includes `text_extraction` for any readable PDF, DOCX, PNG, or JPEG, including documents outside the financial extraction scope. `text_extraction.status` reports reader quality (`complete`, `partial`, or `failed`), `text` is the combined plain text, and `pages` holds page-wise text. This text is derived from the persisted CDR, so existing jobs also expose it without reprocessing. The plain text uses the primary native/OCR reading; alternative vision or OCR-correction candidates remain separately visible in `source_document`.
+
+For example, a PAN card JPEG can be read by Tesseract and return its text while the job status is `unsupported`. That status means the financial invoice/bill/receipt schema was not applied; it does not mean upload or text reading failed. A document that cannot be classified confidently remains `needs_review`, with any readable text still available. No AI extraction model is called for these nonfinancial cases.
+
+Recent job names and IDs are stored only in your browser. Source files, extraction results, and processing history continue to be stored by the existing backend. The dashboard and API are bound to localhost in the Docker configuration because access control is not yet implemented.
+
 ## Extraction pipeline
 
 The upload API stores the original file and automatically queues an extraction job. A separate worker then reads the stored file through image, DOCX, or PDF adapters, classifies it, extracts typed fields through LangChain, validates source evidence and arithmetic, and persists the result. LangGraph controls stage routing. The API and worker share PostgreSQL plus persistent upload/artifact volumes.
@@ -66,7 +80,7 @@ Once the server is running, you can access:
   - Search filter bar enabled.
 - **ReDoc (Alternative Clean Documentation)**: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 - **OpenAPI Schema (JSON)**: [http://localhost:8000/openapi.json](http://localhost:8000/openapi.json)
-- **Root URL Redirect**: Opening [http://localhost:8000/](http://localhost:8000/) automatically redirects to `/docs`.
+- **Root URL Redirect**: Opening [http://localhost:8000/](http://localhost:8000/) automatically redirects to `/app`.
 
 ---
 
@@ -78,8 +92,8 @@ Once the server is running, you can access:
    ```
    *(Or in background: `docker compose up -d --build`)*
 
-2. **Open Swagger UI**:
-   Navigate to [http://localhost:8000/docs](http://localhost:8000/docs).
+2. **Open the dashboard**:
+   Navigate to [http://localhost:8000/app](http://localhost:8000/app). Swagger UI is available at [http://localhost:8000/docs](http://localhost:8000/docs).
 
 3. **Stop containers**:
    ```bash

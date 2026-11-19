@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0d2432">
+    <meta name="description" content="Read text from uploaded documents, and inspect financial extraction and every processing step.">
+    <title>Workspace · Invoice Extract</title>
+    <link rel="stylesheet" href="/app/assets/app.css">
+    <script src="/app/assets/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/app" aria-label="Invoice Extract home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="brand-copy"><strong>Invoice Extract</strong><small>Document workspace</small></span>
+        </a>
+        <nav class="topnav" aria-label="Primary navigation">
+          <a class="nav-link active" href="/app" aria-current="page">Workspace</a>
+          <a class="nav-link" href="/docs" target="_blank" rel="noopener">API docs</a>
+        </nav>
+        <div class="service-state" id="service-state" aria-live="polite"><span class="state-dot"></span><span>Checking service</span></div>
+      </div>
+    </header>
+
+    <main class="main-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">DOCUMENT WORKSPACE</p>
+          <h1 id="page-title">See the whole story behind every number.</h1>
+          <p class="intro-copy">Upload a PDF, DOCX or image to read its text. For invoices, bills and receipts, also inspect financial fields, evidence and every processing step.</p>
+        </div>
+        <div class="intro-note" aria-label="How it works">
+          <span class="intro-note-icon" aria-hidden="true">◎</span>
+          <div><strong>Upload once</strong><span>Extraction starts automatically in the background.</span></div>
+        </div>
+      </section>
+
+      <div class="workspace-grid">
+        <aside class="sidebar" aria-label="Document controls">
+          <section class="panel upload-panel" aria-labelledby="upload-title">
+            <div class="panel-heading">
+              <span class="section-icon" aria-hidden="true">01</span>
+              <div><p class="kicker">NEW DOCUMENT</p><h2 id="upload-title">Upload a file</h2></div>
+            </div>
+            <input id="file-input" type="file" accept=".pdf,.docx,.png,.jpg,.jpeg,application/pdf,image/png,image/jpeg,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden>
+            <button id="drop-zone" class="drop-zone" type="button" aria-describedby="upload-help">
+              <span class="upload-glyph" aria-hidden="true">↑</span>
+              <strong>Drop your document here</strong>
+              <span>or click to browse files</span>
+            </button>
+            <p id="upload-help" class="help-text">PDF, DOCX, PNG or JPEG · up to 25 MB</p>
+            <div id="selected-file" class="selected-file hidden" aria-live="polite"></div>
+            <button id="upload-button" class="primary-button" type="button" disabled>Upload and extract</button>
+            <p class="subtle-note">Your file is stored locally by this service. Results appear here as the worker completes each step.</p>
+          </section>
+
+          <section class="panel lookup-panel" aria-labelledby="lookup-title">
+            <div class="panel-heading compact">
+              <span class="section-icon" aria-hidden="true">02</span>
+              <div><p class="kicker">EXISTING JOB</p><h2 id="lookup-title">Open a result</h2></div>
+            </div>
+            <form id="lookup-form" class="lookup-form">
+              <label for="job-id-input">Job ID</label>
+              <div class="lookup-row"><input id="job-id-input" type="text" inputmode="text" autocomplete="off" spellcheck="false" placeholder="Paste a job ID" required><button type="submit">Open</button></div>
+            </form>
+          </section>
+
+          <section class="panel recent-panel" aria-labelledby="recent-title">
+            <div class="recent-heading"><h2 id="recent-title">Recent on this browser</h2><button id="clear-recent" class="text-button" type="button">Clear</button></div>
+            <div id="recent-list" class="recent-list"><p class="quiet">No recent jobs yet.</p></div>
+          </section>
+        </aside>
+
+        <section class="results-area" aria-labelledby="results-title">
+          <div id="message-banner" class="message-banner hidden" role="alert"></div>
+          <div id="empty-state" class="empty-state panel">
+            <div class="empty-art" aria-hidden="true"><div class="empty-sheet"><span></span><span></span><span></span><span></span></div><div class="empty-check">✓</div></div>
+            <p class="kicker">READY WHEN YOU ARE</p>
+            <h2 id="results-title">Your document details will appear here.</h2>
+            <p>Upload a file or open a job ID to explore extracted fields, the original reading, model usage and every processing action.</p>
+            <div class="empty-pills"><span>Source text</span><span>Financial fields</span><span>Step timeline</span></div>
+          </div>
+
+          <div id="job-view" class="job-view hidden">
+            <section class="job-hero panel" aria-labelledby="job-title">
+              <div class="job-hero-main">
+                <div class="job-overline"><span class="kicker">EXTRACTION RESULT</span><span id="job-status" class="status-badge">Queued</span></div>
+                <h2 id="job-title">Document result</h2>
+                <p id="job-subtitle" class="job-subtitle"></p>
+                <div class="job-meta"><span id="job-id-display"></span><button id="copy-job-id" type="button" class="copy-link">Copy ID</button></div>
+              </div>
+              <div id="job-metrics" class="job-metrics"></div>
+            </section>
+
+            <nav class="tab-bar" role="tablist" aria-label="Result sections">
+              <button id="tab-overview" class="tab active" role="tab" type="button" data-tab="overview" aria-controls="panel-overview" aria-selected="true">Overview</button>
+              <button id="tab-source" class="tab" role="tab" type="button" data-tab="source" aria-controls="panel-source" aria-selected="false" tabindex="-1">Source content</button>
+              <button id="tab-timeline" class="tab" role="tab" type="button" data-tab="timeline" aria-controls="panel-timeline" aria-selected="false" tabindex="-1">Step timeline</button>
+              <button id="tab-json" class="tab" role="tab" type="button" data-tab="json" aria-controls="panel-json" aria-selected="false" tabindex="-1">Raw JSON</button>
+            </nav>
+
+            <div id="panel-overview" class="tab-panel" role="tabpanel" aria-labelledby="tab-overview"></div>
+            <div id="panel-source" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-source"></div>
+            <div id="panel-timeline" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-timeline"></div>
+            <div id="panel-json" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-json"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  </body>
+</html>

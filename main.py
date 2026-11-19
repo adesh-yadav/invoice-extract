@@ -4,12 +4,14 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 from fastapi import HTTPException
+from fastapi.staticfiles import StaticFiles
 from sqlalchemy import text as sql_text
 
 from src.core.config import settings
 from src.infrastructure.database.session import init_db, engine
 from src.modules.file_upload.adapters.inbound.rest.router import router as file_upload_router
 from src.modules.extraction.adapters.inbound.rest.router import router as extraction_router
+from src.modules.extraction.adapters.inbound.web.router import router as dashboard_router, STATIC_DIR as DASHBOARD_STATIC_DIR
 
 logging.basicConfig(
     level=logging.INFO if not settings.DEBUG else logging.DEBUG,
@@ -107,12 +109,14 @@ app.add_middleware(
 # Register Module Routers
 app.include_router(file_upload_router)
 app.include_router(extraction_router)
+app.include_router(dashboard_router)
+app.mount("/app/assets", StaticFiles(directory=DASHBOARD_STATIC_DIR), name="dashboard-assets")
 
 
 @app.get("/", include_in_schema=False)
-def redirect_to_swagger():
-    """Redirect root path to interactive Swagger documentation."""
-    return RedirectResponse(url="/docs")
+def redirect_to_dashboard():
+    """Open the extraction dashboard; API docs remain at /docs."""
+    return RedirectResponse(url="/app")
 
 
 @app.get("/health", tags=["general"], summary="Health check")

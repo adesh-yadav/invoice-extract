@@ -62,3 +62,17 @@ class CDR(BaseModel):
 
     def ordered_text(self) -> str:
         return "\n".join(block.text for page in self.pages for block in sorted(page.text_blocks, key=lambda b: b.order))
+
+    def primary_text_pages(self) -> list[tuple[int, str]]:
+        """Readable text per page, excluding alternative AI correction candidates."""
+        return [
+            (
+                page.page_number,
+                "\n".join(
+                    block.text.strip()
+                    for block in sorted(page.text_blocks, key=lambda block: block.order)
+                    if block.text.strip() and not block.source.endswith("_candidate")
+                ),
+            )
+            for page in self.pages
+        ]

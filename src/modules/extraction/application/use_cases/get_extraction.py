@@ -24,10 +24,23 @@ class GetExtraction:
                 if usage not in models_used:
                     models_used.append(usage)
         source = self.jobs.cdr(job_id)
-        source_document = source.model_dump(mode="json") if source else None
-        if source_document is None and job.cdr_ref:
+        if source is None and job.cdr_ref:
             try:
-                source_document = self.artifacts.read(job.cdr_ref).model_dump(mode="json")
+                source = self.artifacts.read(job.cdr_ref)
             except ExtractionError:
                 pass
-        return {"job_id": job.id, "file_id": job.file_id, "status": job.status, "stage": job.stage, "configured_extraction_model": job.model_name, "models_used": models_used, "processing_steps": steps, "source_document": source_document, "result": stored.extracted_json if stored else None, "validation": stored.validation_report if stored else None, "error": {"code": job.error_code, "message": job.error_message} if job.error_code else None}
+        source_document = source.model_dump(mode="json") if source else None
+        text_extraction = None
+        if source:
+            pages = [{"page_number": number, "text": text} for number, text in source.primary_text_pages()]
+            text_extraction = {
+                "status": source.reader_status.value.lower(),
+                "text": "\n\n".join(page["text"] for page in pages if page["text"]),
+                "pages": pages,
+            }
+        error_messages = {
+            "UNSUPPORTED_DOCUMENT_TYPE": "This document is outside the supported invoice, bill, and receipt types.",
+            "UNKNOWN_DOCUMENT_TYPE": "Could not confidently identify this document as an invoice, bill, or receipt.",
+        }
+        error = {"code": job.error_code, "message": error_messages.get(job.error_code, job.error_message)} if job.error_code else None
+        return {"job_id": job.id, "file_id": job.file_id, "status": job.status, "stage": job.stage, "configured_extraction_model": job.model_name, "models_used": models_used, "processing_steps": steps, "source_document": source_document, "text_extraction": text_extraction, "result": stored.extracted_json if stored else None, "validation": stored.validation_report if stored else None, "error": error}

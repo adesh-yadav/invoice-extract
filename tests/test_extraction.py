@@ -41,6 +41,41 @@ class RepairingExtractor(FakeExtractor):
 
 
 class TestReaders(unittest.TestCase):
+    def test_primary_text_keeps_ocr_and_excludes_alternative_candidates(self):
+        cdr = CDR(file_id="any-file", source_format="image/jpeg", reader_status=ReaderStatus.PARTIAL, pages=[Page(page_number=1, text_blocks=[
+            TextBlock(block_id="p1_b2", text="Corrected guess", order=2, source="ocr_cleanup_candidate"),
+            TextBlock(block_id="p1_b1", text="Observed OCR text", order=1, source="ocr"),
+            TextBlock(block_id="p1_b3", text="Vision guess", order=3, source="vision_candidate"),
+        ])])
+        self.assertEqual(cdr.primary_text_pages(), [(1, "Observed OCR text")])
+
+    def test_pan_card_ocr_is_unsupported_without_calling_extraction_model(self):
+        cdr = CDR(
+            file_id="pan-file",
+            source_format="image/jpeg",
+            reader_status=ReaderStatus.PARTIAL,
+            pages=[Page(page_number=1, methods=["ocr"], text_blocks=[
+                TextBlock(block_id="p1_b1", text="PERMANENT ACCOUNT NUMBER", order=1, source="ocr"),
+                TextBlock(block_id="p1_b2", text="FATHER'S NAME", order=2, source="ocr"),
+                TextBlock(block_id="p1_b3", text="DATE OF BIRTH", order=3, source="ocr"),
+            ])],
+        )
+        self.assertEqual(classify(cdr), "unsupported")
+        with tempfile.TemporaryDirectory() as tmp:
+            reader = Mock()
+            reader.read.return_value = cdr
+            extractor = Mock()
+            process = LangGraphProcessor({".jpeg": reader}, extractor, Path(tmp) / "artifacts")
+            state = process.run("pan-job", "pan-file", "/unused/pan.jpeg", "image/jpeg", ".jpeg")
+        self.assertEqual(state["status"], "unsupported")
+        self.assertEqual(state["error_code"], "UNSUPPORTED_DOCUMENT_TYPE")
+        self.assertNotIn("payload", state)
+        extractor.extract.assert_not_called()
+
+    def test_invoice_seller_pan_does_not_make_document_unsupported(self):
+        cdr = CDR(file_id="invoice-file", source_format="application/pdf", reader_status=ReaderStatus.COMPLETE, pages=[Page(page_number=1, text_blocks=[TextBlock(block_id="p1_b1", text="Tax Invoice Number INV-1; Seller PAN No AAJPS3140G; Total 100.00", order=1, source="pdf_native")])])
+        self.assertEqual(classify(cdr), "invoice")
+
     def test_image_reader_and_graph(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

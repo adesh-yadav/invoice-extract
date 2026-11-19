@@ -96,7 +96,7 @@ class LangGraphProcessor:
         kind = classify(self._load_cdr(state))
         self._event(state, "classification", "document_classified", details={"document_type": kind, "engine": "deterministic_rules"})
         if kind == "unsupported":
-            return {"document_type": kind, "status": "unsupported"}
+            return {"document_type": kind, "status": "unsupported", "error_code": "UNSUPPORTED_DOCUMENT_TYPE"}
         if kind == "unknown":
             return {"document_type": kind, "status": "needs_review", "error_code": "UNKNOWN_DOCUMENT_TYPE"}
         return {"document_type": kind}
