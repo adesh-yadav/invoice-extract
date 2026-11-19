@@ -15,20 +15,31 @@ from src.modules.extraction.adapters.outbound.readers.image_reader import ImageR
 from src.modules.extraction.adapters.outbound.readers.docx_reader import DocxReader
 from src.modules.extraction.adapters.outbound.readers.pdf_reader import PdfReader
 from src.modules.extraction.adapters.outbound.orchestration.langgraph_processor import LangGraphProcessor
+from src.modules.extraction.adapters.outbound.ai.provider_factory import ModelConfig, create_chat_model
+from dataclasses import replace
 
 
 def build_process_job(extractor=None) -> LangGraphProcessor:
+    model_config = ModelConfig(
+        provider=settings.LLM_PROVIDER,
+        model=settings.EXTRACTION_MODEL,
+        openai_api_key=settings.OPENAI_API_KEY,
+        anthropic_api_key=settings.ANTHROPIC_API_KEY,
+        ollama_base_url=settings.OLLAMA_BASE_URL,
+    )
+    chat_model = create_chat_model(model_config) if model_config.ready else None
     vision = None
-    if settings.OPENAI_API_KEY:
+    if chat_model is not None and settings.ENABLE_VISION_FALLBACK:
         from src.modules.extraction.adapters.outbound.ai.vision_transcriber import LangChainVisionTranscriber
-        vision = LangChainVisionTranscriber(settings.EXTRACTION_MODEL)
+        vision_model = create_chat_model(replace(model_config, model=settings.VISION_MODEL)) if settings.VISION_MODEL else chat_model
+        vision = LangChainVisionTranscriber(vision_model, settings.LLM_PROVIDER)
     ocr = TesseractOCR(languages=settings.OCR_LANGUAGES, vision=vision, max_pixels=settings.MAX_IMAGE_PIXELS)
     image = ImageReader(ocr)
     docx = DocxReader(ocr)
     pdf = PdfReader(ocr, max_pages=settings.MAX_PDF_PAGES)
-    if extractor is None and settings.OPENAI_API_KEY:
+    if extractor is None and chat_model is not None:
         from src.modules.extraction.adapters.outbound.ai.langchain_extractor import LangChainExtractor
-        extractor = LangChainExtractor(settings.EXTRACTION_MODEL)
+        extractor = LangChainExtractor(chat_model, model_config.resolved_model)
     return LangGraphProcessor({".jpg": image, ".jpeg": image, ".png": image, ".docx": docx, ".pdf": pdf}, extractor, settings.ARTIFACT_DIR)
 
 

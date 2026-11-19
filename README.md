@@ -6,7 +6,26 @@ The existing upload API stores the original file. A separate extraction job then
 
 Compose binds the API and PostgreSQL to `127.0.0.1` while authentication is deferred. Configure ownership and authentication before allowing remote access.
 
-Set `OPENAI_API_KEY` in `.env` for structured extraction and optional vision fallback. `EXTRACTION_MODEL` defaults to `gpt-4.1-mini`; `OCR_LANGUAGES` defaults to `eng` (the Docker image also includes Hindi OCR data). Without a model key, reading and classification still run, but a supported financial document finishes with `MODEL_NOT_CONFIGURED`.
+Select the AI provider in `.env`; the worker reads the selector when it starts. `OCR_LANGUAGES` defaults to `eng` (the Docker image also includes Hindi OCR data). An API provider without a key still reads and classifies a document, then reports `MODEL_NOT_CONFIGURED`.
+
+| Provider | `.env` values | Model default |
+|---|---|---|
+| OpenAI | `LLM_PROVIDER=openai`, paste `OPENAI_API_KEY` | `gpt-4.1-mini` |
+| Claude | `LLM_PROVIDER=anthropic`, paste `ANTHROPIC_API_KEY` | `claude-haiku-4-5-20251001` |
+| Ollama | `LLM_PROVIDER=ollama`; no API key | `gemma3:4b` |
+
+Leave `EXTRACTION_MODEL=` blank for the selected provider default, or set an exact model name. `VISION_MODEL=` defaults to the extraction model. If you choose a text-only Ollama model, set `VISION_MODEL=gemma3:4b` and pull both models, or set `ENABLE_VISION_FALLBACK=false`. Restart the worker after changing `.env` with `docker compose up -d --force-recreate worker`. Keep API keys in the ignored `.env` file; do not commit them.
+
+For local Ollama, start its Docker service and pull the default model into the persistent `ollama_models` volume:
+
+```bash
+./scripts/ollama-model.sh pull gemma3:4b
+./scripts/ollama-model.sh list
+./scripts/ollama-model.sh run gemma3:4b
+docker compose --profile ollama up -d --build
+```
+
+The model tag in `EXTRACTION_MODEL` must match the pulled tag. The default Ollama service runs on CPU and is published only to localhost; `OLLAMA_BASE_URL=http://ollama:11434` is the address used by the worker container. Official setup details: [LangChain Claude](https://docs.langchain.com/oss/python/integrations/chat/anthropic), [LangChain Ollama](https://docs.langchain.com/oss/python/integrations/chat/ollama), [Ollama Docker](https://docs.ollama.com/docker).
 
 ```bash
 docker compose up -d --build

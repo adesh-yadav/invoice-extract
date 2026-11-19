@@ -32,8 +32,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fastapi",
-      "community": 31,
-      "community_name": ".save_to_path",
+      "community": 10,
+      "community_name": "JobRepository",
       "norm_label": "fastapi"
     },
     {
@@ -128,6 +128,36 @@
       "norm_label": "invoice-extract"
     },
     {
+      "label": "ollama-model.sh",
+      "file_type": "code",
+      "source_file": "scripts/ollama-model.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "scripts_ollama_model",
+      "community": 55,
+      "community_name": "ollama-model.sh",
+      "norm_label": "ollama-model.sh"
+    },
+    {
+      "label": "ollama-model.sh script",
+      "file_type": "code",
+      "source_file": "scripts/ollama-model.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "scripts_ollama_model_sh__entry",
+      "community": 55,
+      "community_name": "ollama-model.sh",
+      "norm_label": "ollama-model.sh script"
+    },
+    {
       "label": "config.py",
       "file_type": "code",
       "source_file": "src/core/config.py",
@@ -142,7 +172,7 @@
       "label": "Settings",
       "file_type": "code",
       "source_file": "src/core/config.py",
-      "source_location": "L6",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "src_core_config_settings",
       "community": 31,
@@ -436,6 +466,17 @@
       "norm_label": ".__init__()"
     },
     {
+      "label": "BaseChatModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_langchain_extractor_py_basechatmodel",
+      "community": 0,
+      "community_name": "CDR",
+      "norm_label": "basechatmodel"
+    },
+    {
       "label": ".extract()",
       "file_type": "code",
       "source_file": "src/modules/extraction/adapters/outbound/ai/langchain_extractor.py",
@@ -467,6 +508,83 @@
       "community": 0,
       "community_name": "CDR",
       "norm_label": "llm adapter: source text is data and has no tools or execution privileges."
+    },
+    {
+      "label": "provider_factory.py",
+      "file_type": "code",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_provider_factory",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": "provider_factory.py"
+    },
+    {
+      "label": "ModelConfig",
+      "file_type": "code",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": "modelconfig"
+    },
+    {
+      "label": ".resolved_model()",
+      "file_type": "code",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig_resolved_model",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": ".resolved_model()"
+    },
+    {
+      "label": ".ready()",
+      "file_type": "code",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig_ready",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": ".ready()"
+    },
+    {
+      "label": "create_chat_model()",
+      "file_type": "code",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": "create_chat_model()"
+    },
+    {
+      "label": "BaseChatModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_py_basechatmodel",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": "basechatmodel"
+    },
+    {
+      "label": "Server-selected chat model adapters; no client request can choose a provider.",
+      "file_type": "rationale",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_provider_factory_rationale_1",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": "server-selected chat model adapters; no client request can choose a provider."
     },
     {
       "label": "vision_transcriber.py",
@@ -502,10 +620,21 @@
       "norm_label": ".__init__()"
     },
     {
+      "label": "BaseChatModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_py_basechatmodel",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": "basechatmodel"
+    },
+    {
       "label": ".transcribe()",
       "file_type": "code",
       "source_file": "src/modules/extraction/adapters/outbound/ai/vision_transcriber.py",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber_transcribe",
       "community": 31,
@@ -563,8 +692,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_workflowstate",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "workflowstate"
     },
     {
@@ -574,8 +703,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "typeddict",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "typeddict"
     },
     {
@@ -585,8 +714,8 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "langgraphprocessor"
     },
     {
@@ -596,8 +725,8 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_init",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": ".__init__()"
     },
     {
@@ -607,8 +736,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_py_path",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "path"
     },
     {
@@ -618,8 +747,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_build_graph",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "._build_graph()"
     },
     {
@@ -629,8 +758,8 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_read",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "._read()"
     },
     {
@@ -640,8 +769,8 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_load_cdr",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "._load_cdr()"
     },
     {
@@ -651,8 +780,8 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_classify",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "._classify()"
     },
     {
@@ -662,8 +791,8 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_extract",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "._extract()"
     },
     {
@@ -673,8 +802,8 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_validate",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "._validate()"
     },
     {
@@ -684,8 +813,8 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_after_validation",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "._after_validation()"
     },
     {
@@ -695,8 +824,8 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_repair",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": "._repair()"
     },
     {
@@ -706,8 +835,8 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "src_modules_extraction_adapters_outbound_orchestration_langgraph_processor_langgraphprocessor_run",
-      "community": 50,
-      "community_name": "LangGraphProcessor",
+      "community": 0,
+      "community_name": "CDR",
       "norm_label": ".run()"
     },
     {
@@ -1300,8 +1429,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_extraction_application_ports_artifact_store",
-      "community": 0,
-      "community_name": "CDR",
+      "community": 10,
+      "community_name": "JobRepository",
       "norm_label": "artifact_store.py"
     },
     {
@@ -1836,7 +1965,7 @@
       "label": "build_process_job()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L20",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_build_process_job",
       "community": 31,
@@ -1847,7 +1976,7 @@
       "label": "get_submit_extraction()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L35",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_get_submit_extraction",
       "community": 10,
@@ -1869,7 +1998,7 @@
       "label": "get_get_extraction()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L39",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_get_get_extraction",
       "community": 10,
@@ -1880,7 +2009,7 @@
       "label": "get_retry_extraction()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L43",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_get_retry_extraction",
       "community": 10,
@@ -1891,7 +2020,7 @@
       "label": "get_get_cdr()",
       "file_type": "code",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L47",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "src_modules_extraction_config_module_get_get_cdr",
       "community": 10,
@@ -2375,7 +2504,7 @@
       "label": "process_one()",
       "file_type": "code",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L18",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "src_modules_extraction_worker_process_one",
       "community": 31,
@@ -2386,7 +2515,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L50",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "src_modules_extraction_worker_main",
       "community": 31,
@@ -2411,8 +2540,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_mappers",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "rest/mappers.py"
     },
     {
@@ -2422,8 +2551,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_mappers_to_file_response",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "to_file_response()"
     },
     {
@@ -2433,8 +2562,8 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_mappers_to_file_list_response",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "to_file_list_response()"
     },
     {
@@ -2444,8 +2573,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_mappers_rationale_1",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "mappers \u2014 transforms application view dtos into rest response schemas."
     },
     {
@@ -2466,8 +2595,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router_upload_file",
-      "community": 49,
-      "community_name": "file_upload/adapters/inbound/rest/router.py",
+      "community": 1,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "upload_file()"
     },
     {
@@ -2488,8 +2617,8 @@
       "source_location": "L143",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router_list_files",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 49,
+      "community_name": "file_upload/adapters/inbound/rest/router.py",
       "norm_label": "list_files()"
     },
     {
@@ -2499,8 +2628,8 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_inbound_rest_router_download_file",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 49,
+      "community_name": "file_upload/adapters/inbound/rest/router.py",
       "norm_label": "download_file()"
     },
     {
@@ -2664,8 +2793,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "file_repository.py"
     },
     {
@@ -2675,8 +2804,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": "sqlalchemyfilerepository"
     },
     {
@@ -2686,8 +2815,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_init",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".__init__()"
     },
     {
@@ -2697,8 +2826,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_py_session",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": "session"
     },
     {
@@ -2708,8 +2837,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_save",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".save()"
     },
     {
@@ -2719,8 +2848,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_update",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".update()"
     },
     {
@@ -2730,8 +2859,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_get_by_id",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".get_by_id()"
     },
     {
@@ -2741,8 +2870,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_sqlalchemyfilerepository_list_all",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".list_all()"
     },
     {
@@ -2752,8 +2881,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_rationale_1",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "file_repository \u2014 sqlalchemy persistence adapter implementing filerepositoryport"
     },
     {
@@ -2763,8 +2892,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_file_repository_rationale_13",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": "postgresql adapter for file persistence."
     },
     {
@@ -2774,8 +2903,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "persistence/mappers.py"
     },
     {
@@ -2785,8 +2914,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers_to_domain",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "to_domain()"
     },
     {
@@ -2796,8 +2925,8 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers_to_model",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "to_model()"
     },
     {
@@ -2807,8 +2936,8 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers_update_model",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "update_model()"
     },
     {
@@ -2818,8 +2947,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_mappers_rationale_1",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "mappers \u2014 bidirectional mapping between orm model and domain entity."
     },
     {
@@ -2840,8 +2969,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_models_uploadedfilemodel",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "uploadedfilemodel"
     },
     {
@@ -2851,8 +2980,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_adapters_outbound_persistence_models_py_base",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 31,
+      "community_name": ".save_to_path",
       "norm_label": "base"
     },
     {
@@ -3060,7 +3189,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_init",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "dto/__init__.py"
     },
@@ -3115,8 +3244,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_queries",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "queries.py"
     },
     {
@@ -3126,8 +3255,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_queries_getfileinput",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 49,
+      "community_name": "file_upload/adapters/inbound/rest/router.py",
       "norm_label": "getfileinput"
     },
     {
@@ -3148,8 +3277,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_queries_rationale_1",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "queries \u2014 application input dtos for read requests."
     },
     {
@@ -3159,8 +3288,8 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_queries_rationale_9",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 49,
+      "community_name": "file_upload/adapters/inbound/rest/router.py",
       "norm_label": "input query to fetch file by id."
     },
     {
@@ -3181,7 +3310,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_results",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "results.py"
     },
@@ -3192,7 +3321,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_results_fileview",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "fileview"
     },
@@ -3203,7 +3332,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_results_rationale_1",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "results \u2014 application output dtos (views) decoupling domain model from callers."
     },
@@ -3214,7 +3343,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_dto_results_rationale_11",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": "read view of an uploaded file."
     },
@@ -3225,7 +3354,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_init",
-      "community": 51,
+      "community": 1,
       "community_name": "file_upload/config/module.py",
       "norm_label": "ports/inbound/__init__.py"
     },
@@ -3236,8 +3365,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_get_file",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "inbound/get_file.py"
     },
     {
@@ -3247,8 +3376,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_get_file_getfilequery",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 49,
+      "community_name": "file_upload/adapters/inbound/rest/router.py",
       "norm_label": "getfilequery"
     },
     {
@@ -3258,8 +3387,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_get_file_py_protocol",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 49,
+      "community_name": "file_upload/adapters/inbound/rest/router.py",
       "norm_label": "protocol"
     },
     {
@@ -3269,8 +3398,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_get_file_getfilequery_handle",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 49,
+      "community_name": "file_upload/adapters/inbound/rest/router.py",
       "norm_label": ".handle()"
     },
     {
@@ -3280,8 +3409,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_inbound_get_file_rationale_1",
-      "community": 53,
-      "community_name": "GetFileInput",
+      "community": 51,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "get_file \u2014 inbound port (interface) for retrieving single file metadata."
     },
     {
@@ -3412,8 +3541,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "file_repository_port.py"
     },
     {
@@ -3489,8 +3618,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_repository_port_rationale_1",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "file_repository_port \u2014 outbound port (interface) for file persistence."
     },
     {
@@ -3544,8 +3673,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_filestorageport_save_to_path",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 53,
+      "community_name": "GetFileInput",
       "norm_label": ".save_to_path()"
     },
     {
@@ -3555,8 +3684,8 @@
       "source_location": "",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_py_binaryio",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 53,
+      "community_name": "GetFileInput",
       "norm_label": "binaryio"
     },
     {
@@ -3610,8 +3739,8 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_ports_outbound_file_storage_port_rationale_13",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 53,
+      "community_name": "GetFileInput",
       "norm_label": "saves stream to the designated target path and returns total bytes written."
     },
     {
@@ -3643,8 +3772,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_init",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "file_upload/application/use_cases/__init__.py"
     },
     {
@@ -3654,8 +3783,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "use_cases/get_file.py"
     },
     {
@@ -3687,8 +3816,8 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file_getfile_handle",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": ".handle()"
     },
     {
@@ -3698,8 +3827,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_get_file_rationale_1",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "get_file \u2014 use case for retrieving a single file view."
     },
     {
@@ -3720,8 +3849,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "use_cases/list_files.py"
     },
     {
@@ -3731,8 +3860,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_listfiles",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "listfiles"
     },
     {
@@ -3753,7 +3882,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_listfiles_handle",
-      "community": 1,
+      "community": 51,
       "community_name": "file_upload/config/module.py",
       "norm_label": ".handle()"
     },
@@ -3764,8 +3893,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_rationale_1",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "list_files \u2014 use case for retrieving paginated file views."
     },
     {
@@ -3775,8 +3904,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_list_files_rationale_11",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "implements listfilesquery inbound port."
     },
     {
@@ -3786,8 +3915,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "use_cases/upload_file.py"
     },
     {
@@ -3797,8 +3926,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_to_view",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "_to_view()"
     },
     {
@@ -3808,8 +3937,8 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_uploadfile",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 1,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "uploadfile"
     },
     {
@@ -3841,8 +3970,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_rationale_1",
-      "community": 1,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "upload_file \u2014 use case coordinating the upload lifecycle."
     },
     {
@@ -3852,8 +3981,8 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_modules_file_upload_application_use_cases_upload_file_rationale_35",
-      "community": 48,
-      "community_name": "UploadFile",
+      "community": 1,
+      "community_name": "file_upload/config/module.py",
       "norm_label": "implements uploadfileusecase inbound port."
     },
     {
@@ -3863,8 +3992,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "file_upload/config/module.py"
     },
     {
@@ -3874,8 +4003,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_file_storage",
-      "community": 15,
-      "community_name": ".save_to_path",
+      "community": 48,
+      "community_name": "UploadFile",
       "norm_label": "get_file_storage()"
     },
     {
@@ -3929,8 +4058,8 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_get_list_files_query",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "get_list_files_query()"
     },
     {
@@ -3940,8 +4069,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_modules_file_upload_config_module_rationale_1",
-      "community": 51,
-      "community_name": "file_upload/config/module.py",
+      "community": 52,
+      "community_name": "FileRepositoryPort",
       "norm_label": "module \u2014 wires the file_upload module's ports, adapters, and use cases."
     },
     {
@@ -4138,8 +4267,8 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_modules_file_upload_domain_model_uploaded_file_uploadedfile",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": "uploadedfile"
     },
     {
@@ -4193,8 +4322,8 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_modules_file_upload_domain_model_uploaded_file_rationale_19",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": "uploadedfile aggregate root.     encapsulates lifecycle rules and business invar"
     },
     {
@@ -4218,6 +4347,83 @@
       "community": 2,
       "community_name": "UploadedFile",
       "norm_label": "mark status as failed if physical disk write fails."
+    },
+    {
+      "label": "test_ai_providers.py",
+      "file_type": "code",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "tests_test_ai_providers",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": "test_ai_providers.py"
+    },
+    {
+      "label": "TestProviderFactory",
+      "file_type": "code",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "tests_test_ai_providers_testproviderfactory",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": "testproviderfactory"
+    },
+    {
+      "label": ".test_provider_defaults_and_credentials()",
+      "file_type": "code",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "tests_test_ai_providers_testproviderfactory_test_provider_defaults_and_credentials",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": ".test_provider_defaults_and_credentials()"
+    },
+    {
+      "label": ".test_claude_uses_anthropic_adapter()",
+      "file_type": "code",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "tests_test_ai_providers_testproviderfactory_test_claude_uses_anthropic_adapter",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": ".test_claude_uses_anthropic_adapter()"
+    },
+    {
+      "label": ".test_ollama_uses_local_endpoint()",
+      "file_type": "code",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "tests_test_ai_providers_testproviderfactory_test_ollama_uses_local_endpoint",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": ".test_ollama_uses_local_endpoint()"
+    },
+    {
+      "label": ".test_openai_still_supported()",
+      "file_type": "code",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "tests_test_ai_providers_testproviderfactory_test_openai_still_supported",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": ".test_openai_still_supported()"
+    },
+    {
+      "label": ".test_vision_image_block_matches_provider()",
+      "file_type": "code",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "tests_test_ai_providers_testproviderfactory_test_vision_image_block_matches_provider",
+      "community": 31,
+      "community_name": ".save_to_path",
+      "norm_label": ".test_vision_image_block_matches_provider()"
     },
     {
       "label": "test_extraction.py",
@@ -4413,8 +4619,8 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "tests_test_extraction_use_cases_testextractionusecases_test_job_lifecycle_rejects_terminal_transition",
-      "community": 3,
-      "community_name": "SqlAlchemyJobRepository",
+      "community": 10,
+      "community_name": "JobRepository",
       "norm_label": ".test_job_lifecycle_rejects_terminal_transition()"
     },
     {
@@ -4468,8 +4674,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": "testfileuploadhexagonal"
     },
     {
@@ -4479,8 +4685,8 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_initial_status_is_pending_with_path",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".test_entity_initial_status_is_pending_with_path()"
     },
     {
@@ -4490,8 +4696,8 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_empty_name_raises",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".test_entity_empty_name_raises()"
     },
     {
@@ -4501,8 +4707,8 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_empty_path_raises",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".test_entity_empty_path_raises()"
     },
     {
@@ -4512,8 +4718,8 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_mark_as_success",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".test_entity_mark_as_success()"
     },
     {
@@ -4523,8 +4729,8 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_entity_invalid_status_transition",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 50,
+      "community_name": "LangGraphProcessor",
       "norm_label": ".test_entity_invalid_status_transition()"
     },
     {
@@ -4534,8 +4740,8 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_upload_file_use_case_pre_records_path_in_pending_status",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 1,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".test_upload_file_use_case_pre_records_path_in_pending_status()"
     },
     {
@@ -4545,8 +4751,8 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "tests_test_file_upload_testfileuploadhexagonal_test_upload_file_use_case_failure_flow",
-      "community": 2,
-      "community_name": "UploadedFile",
+      "community": 1,
+      "community_name": "file_upload/config/module.py",
       "norm_label": ".test_upload_file_use_case_failure_flow()"
     },
     {
@@ -6434,7 +6640,7 @@
       "label": "\ud83c\udf10 Swagger UI & Interactive Documentation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L36",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "readme_swagger_ui_interactive_documentation",
       "community": 14,
@@ -6445,7 +6651,7 @@
       "label": "\ud83d\ude80 Running with Docker Compose",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L50",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "readme_running_with_docker_compose",
       "community": 14,
@@ -6456,7 +6662,7 @@
       "label": "\ud83d\udccc Available Endpoints in Swagger UI",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L68",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "readme_available_endpoints_in_swagger_ui",
       "community": 14,
@@ -6467,7 +6673,7 @@
       "label": "\ud83e\uddea Testing File Upload via cURL",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L80",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "readme_testing_file_upload_via_curl",
       "community": 14,
@@ -6755,8 +6961,19 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "scripts/ollama-model.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "scripts_ollama_model",
+      "target": "scripts_ollama_model_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/core/config.py",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_core_config",
@@ -6839,7 +7056,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "src/core/config.py",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_core_config_settings",
@@ -7015,7 +7232,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L51",
+      "source_location": "L57",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker_main",
@@ -7647,6 +7864,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/worker.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_worker",
+      "target": "src_modules_extraction_adapters_outbound_ai_langchain_extractor",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/adapters/outbound/ai/langchain_extractor.py",
@@ -7706,7 +7935,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L30",
+      "source_location": "L41",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -7718,11 +7947,23 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L31",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
       "target": "src_modules_extraction_adapters_outbound_ai_langchain_extractor_langchainextractor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/langchain_extractor.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_langchain_extractor_langchainextractor_init",
+      "target": "src_modules_extraction_adapters_outbound_ai_langchain_extractor_py_basechatmodel",
       "confidence_score": 1.0
     },
     {
@@ -7800,6 +8041,324 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_provider_factory",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_provider_factory",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_provider_factory_rationale_1",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/config/module.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_config_module",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/worker.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_worker",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig_ready",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig_resolved_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/config/module.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_config_module",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/config/module.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_config_module_build_process_job",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/worker.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_worker",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/worker.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_worker_process_one",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L4",
+      "weight": 0.8,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_claude_uses_anthropic_adapter",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_ollama_uses_local_endpoint",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_openai_still_supported",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_provider_defaults_and_credentials",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_modelconfig"
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_py_basechatmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/modules/extraction/adapters/outbound/ai/provider_factory.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
+      "target": "valueerror"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/config/module.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_config_module",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/config/module.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_config_module_build_process_job",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_claude_uses_anthropic_adapter",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_ollama_uses_local_endpoint",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_openai_still_supported",
+      "target": "src_modules_extraction_adapters_outbound_ai_provider_factory_create_chat_model"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/adapters/outbound/ai/vision_transcriber.py",
       "source_location": "L10",
       "weight": 1.0,
@@ -7820,6 +8379,18 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers",
+      "target": "src_modules_extraction_adapters_outbound_ai_vision_transcriber",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/adapters/outbound/ai/vision_transcriber.py",
@@ -7834,7 +8405,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/adapters/outbound/ai/vision_transcriber.py",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber",
@@ -7846,7 +8417,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L23",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -7858,7 +8429,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L24",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -7866,11 +8437,58 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers",
+      "target": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L5",
+      "weight": 0.8,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory",
+      "target": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory_test_vision_image_block_matches_provider",
+      "target": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber"
+    },
+    {
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/adapters/outbound/ai/vision_transcriber.py",
-      "source_location": "L14",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber_init",
+      "target": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_py_basechatmodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/modules/extraction/adapters/outbound/ai/vision_transcriber.py",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_adapters_outbound_ai_vision_transcriber_langchainvisiontranscriber_transcribe",
@@ -8354,7 +8972,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -8717,7 +9335,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L48",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_cdr",
@@ -8893,7 +9511,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L36",
+      "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_submit_extraction",
@@ -9159,7 +9777,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L48",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_cdr",
@@ -9171,7 +9789,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L40",
+      "source_location": "L51",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_extraction",
@@ -9183,7 +9801,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L44",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_retry_extraction",
@@ -9195,7 +9813,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L36",
+      "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_submit_extraction",
@@ -9219,7 +9837,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker_process_one",
@@ -9790,7 +10408,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L27",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -10175,7 +10793,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L26",
+      "source_location": "L37",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -10569,7 +11187,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L25",
+      "source_location": "L36",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -10919,7 +11537,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L28",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_build_process_job",
@@ -12091,7 +12709,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L47",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_cdr",
@@ -12219,7 +12837,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L39",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_extraction",
@@ -12347,7 +12965,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L43",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_retry_extraction",
@@ -12510,7 +13128,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L35",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_submit_extraction",
@@ -12580,7 +13198,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -12591,7 +13209,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L47",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -12602,7 +13220,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L39",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -12613,7 +13231,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L43",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -12624,7 +13242,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L35",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module",
@@ -12660,7 +13278,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L33",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker_process_one",
@@ -12672,7 +13290,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L35",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_submit_extraction",
@@ -12684,7 +13302,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L47",
+      "source_location": "L58",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_cdr",
@@ -12696,7 +13314,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L39",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_get_extraction",
@@ -12708,7 +13326,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/config/module.py",
-      "source_location": "L43",
+      "source_location": "L54",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_config_module_get_retry_extraction",
@@ -14267,7 +14885,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L50",
+      "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker",
@@ -14278,7 +14896,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker",
@@ -14349,7 +14967,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L63",
+      "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker_main",
@@ -14362,7 +14980,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker_process_one",
@@ -14374,7 +14992,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker_process_one",
@@ -14385,7 +15003,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/modules/extraction/worker.py",
-      "source_location": "L58",
+      "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_modules_extraction_worker_main",
@@ -19418,6 +20036,72 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers",
+      "target": "tests_test_ai_providers_testproviderfactory",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory",
+      "target": "tests_test_ai_providers_testproviderfactory_test_claude_uses_anthropic_adapter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory",
+      "target": "tests_test_ai_providers_testproviderfactory_test_ollama_uses_local_endpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory",
+      "target": "tests_test_ai_providers_testproviderfactory_test_openai_still_supported",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory",
+      "target": "tests_test_ai_providers_testproviderfactory_test_provider_defaults_and_credentials",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "tests/test_ai_providers.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "tests_test_ai_providers_testproviderfactory",
+      "target": "tests_test_ai_providers_testproviderfactory_test_vision_image_block_matches_provider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "tests/test_extraction.py",
       "source_location": "L22",
       "weight": 1.0,
@@ -21615,7 +22299,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L68",
+      "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_invoice_extract_api",
@@ -21637,7 +22321,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L50",
+      "source_location": "L69",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_invoice_extract_api",
@@ -21648,7 +22332,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L36",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_invoice_extract_api",
@@ -21659,7 +22343,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L80",
+      "source_location": "L99",
       "weight": 1.0,
       "_origin": "ast",
       "source": "readme_invoice_extract_api",
@@ -21700,5 +22384,6 @@
       "confidence_score": 1.0
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "b5518cbd3de609746c0032ffb858fc52d24155f7"
 }

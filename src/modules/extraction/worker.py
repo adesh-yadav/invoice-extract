@@ -10,6 +10,8 @@ from src.modules.file_upload.adapters.outbound.persistence.models import Uploade
 from src.modules.file_upload.adapters.outbound.persistence.recovery import reconcile_stale_uploads
 from src.modules.extraction.adapters.outbound.persistence.job_repository import SqlAlchemyJobRepository
 from src.modules.extraction.config.module import build_process_job
+from src.modules.extraction.adapters.outbound.ai.provider_factory import ModelConfig
+from src.modules.extraction.adapters.outbound.ai.langchain_extractor import PROMPT_VERSION
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -30,6 +32,10 @@ def process_one(worker_id: str, workflow=None) -> bool:
                 raise ValueError("STORED_FILE_MISSING")
             if path.stat().st_size > settings.MAX_FILE_SIZE_BYTES:
                 raise ValueError("FILE_SIZE_LIMIT")
+            configured = ModelConfig(settings.LLM_PROVIDER, settings.EXTRACTION_MODEL)
+            job.model_name = f"{configured.provider}:{configured.resolved_model}"
+            job.prompt_version = PROMPT_VERSION
+            db.commit()
             workflow = workflow or build_process_job()
             state = workflow.run(job.id, file.id, str(path), file.content_type, file.file_extension)
             payload = state.get("payload")
