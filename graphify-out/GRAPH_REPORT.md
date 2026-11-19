@@ -1,21 +1,22 @@
 # Graph Report - invoice-extract  (2026-11-19)
 
 ## Corpus Check
-- 90 files · ~24,789 words
+- 96 files · ~27,357 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 611 nodes · 1364 edges · 50 communities (48 shown, 2 thin omitted)
-- Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 176 edges (avg confidence: 0.55)
+- 660 nodes · 1557 edges · 52 communities (50 shown, 2 thin omitted)
+- Extraction: 86% EXTRACTED · 14% INFERRED · 0% AMBIGUOUS · INFERRED: 214 edges (avg confidence: 0.55)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b4da370b`
+- Built from commit: `8f327021`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - CDR
+- LangGraphProcessor
 - UploadedFile
 - SqlAlchemyJobRepository
 - Invoice_Bill_Receipt_Extraction_Architecture_Blueprint.md
@@ -48,50 +49,55 @@
 - .save_to_path
 - invoice-extract
 - Invoice extraction repository instructions
+- e2e_smoke.py
 - file_upload/config/module.py
 - Implementation status against Blueprint V1.0
 - ollama-model.sh
 
 ## God Nodes (most connected - your core abstractions)
-1. `CDR` - 47 edges
+1. `CDR` - 69 edges
 2. `UploadedFile` - 35 edges
-3. `ExtractionError` - 25 edges
-4. `FileView` - 25 edges
-5. `FileRepositoryPort` - 24 edges
-6. `LangGraphProcessor` - 23 edges
-7. `ExtractionPayload` - 22 edges
-8. `SqlAlchemyJobRepository` - 20 edges
-9. `ReaderStatus` - 20 edges
-10. `PdfReader` - 19 edges
+3. `SqlAlchemyJobRepository` - 32 edges
+4. `LangGraphProcessor` - 25 edges
+5. `Page` - 25 edges
+6. `ExtractionError` - 25 edges
+7. `FileView` - 25 edges
+8. `TesseractOCR` - 24 edges
+9. `ReaderStatus` - 24 edges
+10. `TextBlock` - 24 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `TestFileUploadHexagonal` --uses--> `UploadFileInput`  [INFERRED]
-  tests/test_file_upload.py → src/modules/file_upload/application/dto/commands.py
-- `TestProviderFactory` --uses--> `ModelConfig`  [INFERRED]
-  tests/test_ai_providers.py → src/modules/extraction/adapters/outbound/ai/provider_factory.py
-- `TestProviderFactory` --uses--> `LangChainVisionTranscriber`  [INFERRED]
-  tests/test_ai_providers.py → src/modules/extraction/adapters/outbound/ai/vision_transcriber.py
 - `FakeExtractor` --uses--> `LangGraphProcessor`  [INFERRED]
   tests/test_extraction.py → src/modules/extraction/adapters/outbound/orchestration/langgraph_processor.py
 - `FakeOCR` --uses--> `LangGraphProcessor`  [INFERRED]
   tests/test_extraction.py → src/modules/extraction/adapters/outbound/orchestration/langgraph_processor.py
+- `RepairingExtractor` --uses--> `LangGraphProcessor`  [INFERRED]
+  tests/test_extraction.py → src/modules/extraction/adapters/outbound/orchestration/langgraph_processor.py
+- `TestReaders` --uses--> `LangGraphProcessor`  [INFERRED]
+  tests/test_extraction.py → src/modules/extraction/adapters/outbound/orchestration/langgraph_processor.py
+- `TestJobPersistence` --uses--> `SqlAlchemyJobRepository`  [INFERRED]
+  tests/test_job_persistence.py → src/modules/extraction/adapters/outbound/persistence/job_repository.py
 
 ## Import Cycles
 - None detected.
 
-## Communities (50 total, 2 thin omitted)
+## Communities (52 total, 2 thin omitted)
 
 ### Community 0 - "CDR"
 Cohesion: 0.07
-Nodes (53): Decimal, LangChainExtractor, BaseChatModel, LLM adapter: source text is data and has no tools or execution privileges., LangGraphProcessor, Path, Application orchestration; adapters are injected and graph nodes stay small., WorkflowState (+45 more)
+Nodes (52): Decimal, LangChainExtractor, BaseChatModel, LLM adapter: source text is data and has no tools or execution privileges., Application orchestration; adapters are injected and graph nodes stay small., DocxReader, Path, ImageReader (+44 more)
+
+### Community 1 - "LangGraphProcessor"
+Cohesion: 0.33
+Nodes (4): LangGraphProcessor, Path, WorkflowState, TypedDict
 
 ### Community 2 - "UploadedFile"
-Cohesion: 0.07
-Nodes (32): Session, file_repository — SQLAlchemy persistence adapter implementing FileRepositoryPort, PostgreSQL adapter for file persistence., SqlAlchemyFileRepository, mappers — bidirectional mapping between ORM model and domain entity., to_domain(), to_model(), update_model() (+24 more)
+Cohesion: 0.08
+Nodes (30): Session, file_repository — SQLAlchemy persistence adapter implementing FileRepositoryPort, PostgreSQL adapter for file persistence., SqlAlchemyFileRepository, mappers — bidirectional mapping between ORM model and domain entity., to_domain(), to_model(), update_model() (+22 more)
 
 ### Community 3 - "SqlAlchemyJobRepository"
 Cohesion: 0.12
-Nodes (12): create_chat_model(), ModelConfig, BaseChatModel, Server-selected chat model adapters; no client request can choose a provider., LangChainVisionTranscriber, BaseChatModel, Image, Bounded vision transcription fallback for unreadable raster pages. (+4 more)
+Nodes (13): LangChainOCRCleaner, BaseChatModel, Optional low-confidence OCR correction; the raw OCR reading remains authoritativ, create_chat_model(), ModelConfig, BaseChatModel, Server-selected chat model adapters; no client request can choose a provider., LangChainVisionTranscriber (+5 more)
 
 ### Community 4 - "Invoice_Bill_Receipt_Extraction_Architecture_Blueprint.md"
 Cohesion: 0.13
@@ -118,7 +124,7 @@ Cohesion: 0.25
 Nodes (8): 6.1 Core principle, 6.2 Reader interface — logical, not code, 6.3 Proposed CDR v1 contract, 6.4 Minimum logical block types, 6.5 CDR partial-content policy, 6. Reader Abstraction and Common Document Representation (CDR), CDR design rules, Why CDR matters
 
 ### Community 10 - "JobRepository"
-Cohesion: 0.08
+Cohesion: 0.07
 Nodes (34): create_extraction(), CreateRequest, get_cdr(), get_extraction(), Options, BaseModel, HTTP adapter translating requests into application use cases., respond() (+26 more)
 
 ### Community 11 - "13. Normalization, Validation and Financial Controls"
@@ -138,8 +144,8 @@ Cohesion: 0.29
 Nodes (6): 📌 Available Endpoints in Swagger UI, Extraction pipeline, 📑 Invoice Extract API, 🚀 Running with Docker Compose, 🌐 Swagger UI & Interactive Documentation, 🧪 Testing File Upload via cURL
 
 ### Community 15 - ".save_to_path"
-Cohesion: 0.18
-Nodes (8): LocalDiskFileStorage, BinaryIO, Path, local_storage — physical volume storage adapter implementing FileStoragePort., Storage adapter persisting files to disk / mounted Docker volume., Pre-computes the target absolute path., Write and flush a sibling temporary file, then atomically rename., TestLocalStorage
+Cohesion: 0.09
+Nodes (17): LocalDiskFileStorage, BinaryIO, Path, local_storage — physical volume storage adapter implementing FileStoragePort., Storage adapter persisting files to disk / mounted Docker volume., Pre-computes the target absolute path., Write and flush a sibling temporary file, then atomically rename., FileStoragePort (+9 more)
 
 ### Community 16 - "11. Canonical Financial JSON Schema v1"
 Cohesion: 0.33
@@ -202,16 +208,20 @@ Cohesion: 0.50
 Nodes (4): Contents, Executive Summary, Full Architecture & Engineering Design Blueprint (V1.0), Invoice / Bill / Receipt Extraction Microservice
 
 ### Community 31 - ".save_to_path"
-Cohesion: 0.07
-Nodes (31): FastAPI, health_check(), lifespan(), Redirect root path to interactive Swagger documentation., Health check endpoint to verify API server is alive., Application lifespan context for startup and shutdown routines., redirect_to_swagger(), BaseModel (+23 more)
+Cohesion: 0.06
+Nodes (37): FastAPI, health_check(), lifespan(), Redirect root path to interactive Swagger documentation., Health check endpoint to verify API server is alive., Application lifespan context for startup and shutdown routines., redirect_to_swagger(), BaseModel (+29 more)
 
 ### Community 46 - "Invoice extraction repository instructions"
 Cohesion: 0.40
 Nodes (4): Architecture, Graphify, Invoice extraction repository instructions, Verification
 
+### Community 48 - "e2e_smoke.py"
+Cohesion: 0.36
+Nodes (9): Client, Response, docx_bytes(), image_bytes(), main(), pdf_bytes(), process(), Run synthetic upload-to-result checks against a locally running API. (+1 more)
+
 ### Community 51 - "file_upload/config/module.py"
 Cohesion: 0.06
-Nodes (58): mappers — transforms application view DTOs into REST response schemas., to_file_list_response(), to_file_response(), download_file(), get_file(), list_files(), router — HTTP REST inbound adapter exposing file upload and retrieval endpoints., upload_file() (+50 more)
+Nodes (53): mappers — transforms application view DTOs into REST response schemas., to_file_list_response(), to_file_response(), download_file(), get_file(), list_files(), router — HTTP REST inbound adapter exposing file upload and retrieval endpoints., upload_file() (+45 more)
 
 ### Community 54 - "Implementation status against Blueprint V1.0"
 Cohesion: 0.50
@@ -225,17 +235,17 @@ Nodes (3): Implementation status against Blueprint V1.0, Next release gates, Ver
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `CDR` connect `CDR` to `JobRepository`, `SqlAlchemyJobRepository`?**
-  _High betweenness centrality (0.056) - this node is a cross-community bridge._
-- **Why does `UploadedFile` connect `UploadedFile` to `SqlAlchemyJobRepository`, `file_upload/config/module.py`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **Why does `UploadedFileModel` connect `UploadedFile` to `JobRepository`, `SqlAlchemyJobRepository`, `.save_to_path`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Are the 17 inferred relationships involving `CDR` (e.g. with `CreateRequest` and `Options`) actually correct?**
-  _`CDR` has 17 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `CDR` connect `CDR` to `LangGraphProcessor`, `JobRepository`, `.save_to_path`?**
+  _High betweenness centrality (0.078) - this node is a cross-community bridge._
+- **Why does `UploadedFile` connect `UploadedFile` to `CDR`, `file_upload/config/module.py`?**
+  _High betweenness centrality (0.034) - this node is a cross-community bridge._
+- **Why does `UploadedFileModel` connect `UploadedFile` to `CDR`, `JobRepository`, `.save_to_path`?**
+  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+- **Are the 25 inferred relationships involving `CDR` (e.g. with `CreateRequest` and `Options`) actually correct?**
+  _`CDR` has 25 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 5 inferred relationships involving `UploadedFile` (e.g. with `SqlAlchemyFileRepository` and `FileRepositoryPort`) actually correct?**
   _`UploadedFile` has 5 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 10 inferred relationships involving `ExtractionError` (e.g. with `CreateRequest` and `Options`) actually correct?**
-  _`ExtractionError` has 10 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 6 inferred relationships involving `FileView` (e.g. with `GetFileQuery` and `ListFilesQuery`) actually correct?**
-  _`FileView` has 6 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 8 inferred relationships involving `SqlAlchemyJobRepository` (e.g. with `ExtractionEventModel` and `ExtractionJobModel`) actually correct?**
+  _`SqlAlchemyJobRepository` has 8 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 8 inferred relationships involving `LangGraphProcessor` (e.g. with `CDR` and `ReaderStatus`) actually correct?**
+  _`LangGraphProcessor` has 8 INFERRED edges - model-reasoned connections that need verification._

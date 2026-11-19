@@ -76,6 +76,15 @@ class Evidence(BaseModel):
     raw_text: str
     resolution: str = "direct_supported_reading"
 
+    @field_validator("field_path")
+    @classmethod
+    def canonical_field_path(cls, value: str) -> str:
+        path = re.sub(r"\[(\d+)\]", r".\1", value.strip())
+        root = path.split(".", 1)[0]
+        if root in FinancialDocument.model_fields:
+            return f"document.{path}"
+        return path
+
 
 class ExtractionPayload(BaseModel):
     document: FinancialDocument

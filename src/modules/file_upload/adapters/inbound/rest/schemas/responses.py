@@ -73,6 +73,8 @@ class FileUploadResponse(BaseModel):
         ...,
         description="Timestamp of the latest status transition or update.",
     )
+    extraction_job_id: str | None = Field(default=None, description="Automatically queued extraction job ID, present in upload responses.")
+    extraction_status_url: str | None = Field(default=None, description="Poll this URL for processing steps and extracted data.")
 
 
 class FileListResponse(BaseModel):

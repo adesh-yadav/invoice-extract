@@ -4,8 +4,10 @@ from uuid import uuid4
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
-from src.modules.extraction.adapters.outbound.persistence.models import ExtractionJobModel, ExtractionResultModel
+from src.modules.extraction.adapters.outbound.persistence.models import ExtractionJobModel, ExtractionResultModel, ExtractionEventModel, ExtractionSourceModel
 from src.modules.extraction.domain.job import ensure_transition
+from src.modules.extraction.domain.processing import ProcessingEvent
+from src.modules.extraction.domain.cdr import CDR
 
 
 class SqlAlchemyJobRepository:
@@ -22,6 +24,8 @@ class SqlAlchemyJobRepository:
         job = ExtractionJobModel(id=str(uuid4()), file_id=file_id, status="queued", stage="queued", idempotency_key=idempotency_key)
         self.session.add(job)
         try:
+            self.session.flush()
+            self.session.add(ExtractionEventModel(job_id=job.id, phase="submission", action="job_queued", status="completed", details={"file_id": file_id}))
             self.session.commit()
         except IntegrityError:
             self.session.rollback()
@@ -53,6 +57,7 @@ class SqlAlchemyJobRepository:
         job.lease_until = now + timedelta(minutes=30)
         job.attempt_count += 1
         job.started_at = job.started_at or now
+        self.session.add(ExtractionEventModel(job_id=job.id, phase="worker", action="job_claimed", status="completed", details={"attempt": job.attempt_count}))
         self.session.commit()
         self.session.refresh(job)
         return job
@@ -79,7 +84,33 @@ class SqlAlchemyJobRepository:
         job.lease_until = None
         if result is not None or validation is not None:
             self.session.add(ExtractionResultModel(id=str(uuid4()), job_id=job_id, document_type=document_type, extracted_json=result, validation_report=validation, evidence_ref=cdr_ref))
+        self.session.add(ExtractionEventModel(job_id=job_id, phase="finalization", action="job_finished", status=status, details={"document_type": document_type, "error_code": error_code}))
         self.session.commit()
 
     def result(self, job_id: str) -> ExtractionResultModel | None:
         return self.session.query(ExtractionResultModel).filter_by(job_id=job_id).first()
+
+    def record_event(self, job_id: str, event: ProcessingEvent) -> None:
+        if event.phase in {"reading", "classification", "extraction", "validation", "repair"}:
+            job = self.session.get(ExtractionJobModel, job_id)
+            if job is not None:
+                job.stage = event.phase
+        self.session.add(ExtractionEventModel(job_id=job_id, phase=event.phase, action=event.action, status=event.status, details=event.details))
+        self.session.commit()
+
+    def events(self, job_id: str) -> list[dict]:
+        rows = self.session.query(ExtractionEventModel).filter_by(job_id=job_id).order_by(ExtractionEventModel.id).all()
+        return [{"sequence": sequence, "phase": row.phase, "action": row.action, "status": row.status, "details": row.details, "at": row.created_at.isoformat() if row.created_at else None} for sequence, row in enumerate(rows, 1)]
+
+    def save_cdr(self, job_id: str, cdr: CDR) -> None:
+        source = self.session.get(ExtractionSourceModel, job_id)
+        if source is None:
+            source = ExtractionSourceModel(job_id=job_id, cdr_json=cdr.model_dump(mode="json"))
+            self.session.add(source)
+        else:
+            source.cdr_json = cdr.model_dump(mode="json")
+        self.session.commit()
+
+    def cdr(self, job_id: str) -> CDR | None:
+        source = self.session.get(ExtractionSourceModel, job_id)
+        return CDR.model_validate(source.cdr_json) if source else None

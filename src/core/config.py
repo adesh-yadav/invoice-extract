@@ -18,14 +18,18 @@ class Settings(BaseModel):
     # Upload storage directory
     UPLOAD_DIR: Path = Path(os.getenv("UPLOAD_DIR", "/app/uploads"))
     ARTIFACT_DIR: Path = Path(os.getenv("ARTIFACT_DIR", "/app/artifacts"))
-    LLM_PROVIDER: Literal["openai", "anthropic", "ollama"] = os.getenv("LLM_PROVIDER", "openai").lower()
+    LLM_PROVIDER: Literal["openai", "anthropic", "ollama", "google"] = os.getenv("LLM_PROVIDER", "openai").lower()
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
     ANTHROPIC_API_KEY: str = os.getenv("ANTHROPIC_API_KEY", "")
+    GOOGLE_API_KEY: str = os.getenv("GOOGLE_API_KEY", "")
     OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://ollama:11434")
     EXTRACTION_MODEL: str = os.getenv("EXTRACTION_MODEL", "")
-    VISION_PROVIDER: Literal["", "openai", "anthropic", "ollama"] = os.getenv("VISION_PROVIDER", "").strip().lower()
+    VISION_PROVIDER: Literal["", "openai", "anthropic", "ollama", "google"] = os.getenv("VISION_PROVIDER", "").strip().lower()
     VISION_MODEL: str = os.getenv("VISION_MODEL", "")
     ENABLE_VISION_FALLBACK: bool = os.getenv("ENABLE_VISION_FALLBACK", "true").lower() == "true"
+    OCR_CLEANUP_PROVIDER: Literal["", "openai", "anthropic", "ollama", "google"] = os.getenv("OCR_CLEANUP_PROVIDER", "").strip().lower()
+    OCR_CLEANUP_MODEL: str = os.getenv("OCR_CLEANUP_MODEL", "")
+    ENABLE_OCR_CLEANUP: bool = os.getenv("ENABLE_OCR_CLEANUP", "false").lower() == "true"
     OCR_LANGUAGES: str = os.getenv("OCR_LANGUAGES", "eng")
     CORS_ORIGINS: str = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:8000")
 

@@ -40,3 +40,21 @@ class ExtractionResultModel(Base):
     validation_report = Column(JSON().with_variant(JSONB, "postgresql"), nullable=True)
     evidence_ref = Column(String(512), nullable=True)
     created_at = Column(DateTime(timezone=True), default=now, nullable=False)
+
+
+class ExtractionEventModel(Base):
+    __tablename__ = "extraction_events"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    job_id = Column(String(36), ForeignKey("extraction_jobs.id"), nullable=False, index=True)
+    phase = Column(String(64), nullable=False)
+    action = Column(String(64), nullable=False)
+    status = Column(String(32), nullable=False)
+    details = Column(JSON().with_variant(JSONB, "postgresql"), nullable=False, default=dict)
+    created_at = Column(DateTime(timezone=True), default=now, nullable=False)
+
+
+class ExtractionSourceModel(Base):
+    __tablename__ = "extraction_sources"
+    job_id = Column(String(36), ForeignKey("extraction_jobs.id"), primary_key=True)
+    cdr_json = Column(JSON().with_variant(JSONB, "postgresql"), nullable=False)
+    created_at = Column(DateTime(timezone=True), default=now, nullable=False)

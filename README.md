@@ -2,7 +2,7 @@
 
 ## Extraction pipeline
 
-The existing upload API stores the original file. A separate extraction job then reads the stored file through image, DOCX, or PDF adapters, classifies it, extracts typed fields through LangChain, validates source evidence and arithmetic, and persists the result. LangGraph controls stage routing. The API and worker share PostgreSQL plus persistent upload/artifact volumes.
+The upload API stores the original file and automatically queues an extraction job. A separate worker then reads the stored file through image, DOCX, or PDF adapters, classifies it, extracts typed fields through LangChain, validates source evidence and arithmetic, and persists the result. LangGraph controls stage routing. The API and worker share PostgreSQL plus persistent upload/artifact volumes.
 
 Compose binds the API and PostgreSQL to `127.0.0.1` while authentication is deferred. Configure ownership and authentication before allowing remote access.
 
@@ -13,8 +13,11 @@ Select the AI provider in `.env`; the worker reads the selector when it starts. 
 | OpenAI | `LLM_PROVIDER=openai`, paste `OPENAI_API_KEY` | `gpt-4.1-mini` |
 | Claude | `LLM_PROVIDER=anthropic`, paste `ANTHROPIC_API_KEY` | `claude-haiku-4-5-20251001` |
 | Ollama | `LLM_PROVIDER=ollama`; no API key | `gemma3:4b` |
+| Google Gemini | `LLM_PROVIDER=google`, paste `GOOGLE_API_KEY` | `gemini-2.5-flash` |
 
-Leave `EXTRACTION_MODEL=` blank for the selected provider default, or set an exact model name. `VISION_PROVIDER=` defaults to `LLM_PROVIDER`; set it to `openai`, `anthropic`, or `ollama` to use a different provider for OCR vision fallback. `VISION_MODEL=` defaults to the extraction model when providers match, or the vision provider's default when they differ. The worker reads the corresponding provider key from `OPENAI_API_KEY` or `ANTHROPIC_API_KEY`; Ollama needs its model pulled locally. For example, use `LLM_PROVIDER=anthropic`, `VISION_PROVIDER=openai`, and both provider keys to extract with Claude and read difficult images with OpenAI vision. If you choose a text-only Ollama extraction model, set `VISION_PROVIDER=ollama`, `VISION_MODEL=gemma3:4b` and pull both models, or set `ENABLE_VISION_FALLBACK=false`. Restart the worker after changing `.env` with `docker compose up -d --force-recreate worker`. Keep API keys in the ignored `.env` file; do not commit them.
+Each provider has one key in `.env` (`OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, or `GOOGLE_API_KEY`) shared by all AI roles. Set `LLM_PROVIDER` for structured field extraction, `VISION_PROVIDER` for difficult image transcription, and `OCR_CLEANUP_PROVIDER` for optional low-confidence OCR correction. Valid values are `openai`, `anthropic`, `google`, and `ollama`. Blank role providers inherit `LLM_PROVIDER`. Leave `EXTRACTION_MODEL`, `VISION_MODEL`, and `OCR_CLEANUP_MODEL` blank for code defaults; set a model name only when you want an override. `VISION_MODEL` uses the extraction model when providers match. OCR cleanup is disabled until `ENABLE_OCR_CLEANUP=true`; its corrected text is stored as a separate reviewable candidate, preserving raw OCR. Native PDF/DOCX text extraction and Tesseract OCR do not use an LLM. Restart the worker after changing `.env` with `docker compose up -d --build worker`. Keep keys in the ignored `.env` file; do not commit them.
+
+`GET /v1/extractions/{job_id}` returns ordered `processing_steps` with actions, phases, engines, provider/model names and timestamps, plus `models_used` and the full stored `source_document` CDR (embedded text, OCR/vision candidate blocks, tables, methods and warnings). Extracted JSON, validation, steps and CDR are stored in PostgreSQL; the original file stays on the persistent upload volume. The CDR remains available separately at `GET /v1/extractions/{job_id}/cdr`.
 
 For local Ollama, start its Docker service and pull the default model into the persistent `ollama_models` volume:
 
@@ -25,14 +28,15 @@ For local Ollama, start its Docker service and pull the default model into the p
 docker compose --profile ollama up -d --build
 ```
 
-The model tag in `EXTRACTION_MODEL` must match the pulled tag. The default Ollama service runs on CPU and is published only to localhost; `OLLAMA_BASE_URL=http://ollama:11434` is the address used by the worker container. Official setup details: [LangChain Claude](https://docs.langchain.com/oss/python/integrations/chat/anthropic), [LangChain Ollama](https://docs.langchain.com/oss/python/integrations/chat/ollama), [Ollama Docker](https://docs.ollama.com/docker).
+The model tag in `EXTRACTION_MODEL` must match the pulled tag. The default Ollama service runs on CPU and is published only to localhost; `OLLAMA_BASE_URL=http://ollama:11434` is the address used by the worker container. Official setup details: [LangChain Claude](https://docs.langchain.com/oss/python/integrations/chat/anthropic), [LangChain Gemini](https://reference.langchain.com/python/langchain-google-genai/chat_models/ChatGoogleGenerativeAI), [LangChain Ollama](https://docs.langchain.com/oss/python/integrations/chat/ollama), [Ollama Docker](https://docs.ollama.com/docker).
 
 ```bash
 docker compose up -d --build
 docker compose run --rm --no-deps api python -m unittest discover -s tests -q
+docker compose exec -T api python -u scripts/e2e_smoke.py
 ```
 
-After upload, use the returned `id` as `file_id`:
+Upload returns `extraction_job_id` and `extraction_status_url`. Poll that status URL; an extra create call is unnecessary. The manual create endpoint remains available for explicit reprocessing:
 
 ```bash
 curl -X POST http://localhost:8000/v1/extractions \

@@ -22,6 +22,8 @@ from src.modules.file_upload.config.module import (
     get_upload_file_use_case,
 )
 from src.modules.file_upload.adapters.inbound.rest.validation import validate_upload, UploadValidationError
+from src.modules.extraction.application.use_cases.submit_extraction import SubmitExtraction
+from src.modules.extraction.config.module import get_submit_extraction
 
 router = APIRouter(prefix="/v1/files", tags=["files"])
 
@@ -62,6 +64,7 @@ async def upload_file(
         description="The invoice bill document to upload (PDF, PNG, JPG, JPEG, TIFF).",
     ),
     use_case: UploadFileUseCase = Depends(get_upload_file_use_case),
+    submit_extraction: SubmitExtraction = Depends(get_submit_extraction),
 ) -> FileUploadResponse:
     if not file.filename:
         raise HTTPException(
@@ -83,7 +86,11 @@ async def upload_file(
 
     try:
         view = use_case.handle(request)
-        return mappers.to_file_response(view)
+        response = mappers.to_file_response(view)
+        job = submit_extraction.handle(view.id, f"upload:{view.id}")
+        response.extraction_job_id = job["job_id"]
+        response.extraction_status_url = job["status_url"]
+        return response
     except Exception as exc:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

@@ -13,6 +13,9 @@ class GetCDR:
         job = self.jobs.get(job_id)
         if job is None:
             raise ExtractionError("JOB_NOT_FOUND", 404)
+        stored = self.jobs.cdr(job_id)
+        if stored is not None:
+            return stored
         if not job.cdr_ref:
             raise ExtractionError("CDR_NOT_READY", 409)
         return self.artifacts.read(job.cdr_ref)

@@ -7,10 +7,11 @@ from src.modules.extraction.domain.cdr import Page, ReaderStatus, TextBlock, War
 
 
 class TesseractOCR:
-    def __init__(self, languages: str = "eng", timeout: int = 30, vision=None, max_pixels: int = 40_000_000):
+    def __init__(self, languages: str = "eng", timeout: int = 30, vision=None, cleaner=None, max_pixels: int = 40_000_000):
         self.languages = languages
         self.timeout = timeout
         self.vision = vision
+        self.cleaner = cleaner
         self.max_pixels = max_pixels
 
     def read_page(self, image: Image.Image, page_number: int) -> Page:
@@ -38,6 +39,16 @@ class TesseractOCR:
         elif any(b.confidence is not None and b.confidence < 0.45 for b in blocks):
             page.warnings.append(Warning(code="LOW_OCR_CONFIDENCE", message="Some text is uncertain"))
         uncertain = not blocks or (blocks and sum((b.confidence or 0) for b in blocks)/len(blocks) < 0.45)
+        if uncertain and blocks and self.cleaner is not None:
+            try:
+                observed = "\n".join(block.text for block in blocks)
+                corrected = self.cleaner.clean(observed)
+                page.methods.append("ocr_cleanup")
+                if corrected and corrected != observed:
+                    page.text_blocks.append(TextBlock(block_id=f"p{page_number}_b{len(page.text_blocks)+1}", text=corrected, order=len(page.text_blocks)+1, source="ocr_cleanup_candidate"))
+                    page.warnings.append(Warning(code="OCR_CLEANUP_CANDIDATE", severity="high", message="AI correction differs from raw OCR; review both readings"))
+            except Exception:
+                page.warnings.append(Warning(code="OCR_CLEANUP_UNAVAILABLE", message="OCR cleanup model could not run"))
         if uncertain and self.vision is not None:
             try:
                 transcript = self.vision.transcribe(rgb)
@@ -46,7 +57,7 @@ class TesseractOCR:
                     if not observed:
                         page.text_blocks.append(TextBlock(block_id=f"p{page_number}_b1", text=transcript, order=1, source="vision"))
                     elif transcript.casefold() != observed:
-                        page.text_blocks.append(TextBlock(block_id=f"p{page_number}_b{len(blocks)+1}", text=transcript, order=len(blocks)+1, source="vision_candidate"))
+                        page.text_blocks.append(TextBlock(block_id=f"p{page_number}_b{len(page.text_blocks)+1}", text=transcript, order=len(page.text_blocks)+1, source="vision_candidate"))
                         page.warnings.append(Warning(code="CONFLICTING_READINGS", severity="high", message="OCR and vision transcriptions differ"))
                     page.methods.append("vision")
             except Exception:

@@ -2,6 +2,7 @@ from __future__ import annotations
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import Mock, patch
 from PIL import Image
 from docx import Document
 import pymupdf as fitz
@@ -12,6 +13,7 @@ from src.modules.extraction.adapters.outbound.orchestration.langgraph_processor 
 from src.modules.extraction.adapters.outbound.readers.image_reader import ImageReader
 from src.modules.extraction.adapters.outbound.readers.docx_reader import DocxReader
 from src.modules.extraction.adapters.outbound.readers.pdf_reader import PdfReader
+from src.modules.extraction.adapters.outbound.readers.ocr import TesseractOCR
 
 
 class FakeOCR:
@@ -98,6 +100,22 @@ class TestReaders(unittest.TestCase):
         payload = ExtractionPayload(document=FinancialDocument(document_type="invoice", totals=Totals(subtotal="80", tax_total="10", grand_total="100")))
         codes = {issue.code for issue in validate(payload, cdr)}
         self.assertTrue({"MISSING_TOTAL_EVIDENCE", "TOTAL_MISMATCH", "MISSING_SELLER", "MISSING_INVOICE_NUMBER"} <= codes)
+
+    def test_evidence_paths_from_model_are_canonicalized(self):
+        self.assertEqual(Evidence(field_path="seller.name", page_number=1, block_ids=["p1_b1"], raw_text="ABC Store").field_path, "document.seller.name")
+        self.assertEqual(Evidence(field_path="line_items[0].amount", page_number=1, block_ids=["p1_b1"], raw_text="100").field_path, "document.line_items.0.amount")
+
+    @patch("src.modules.extraction.adapters.outbound.readers.ocr.pytesseract.image_to_data")
+    def test_low_confidence_cleanup_preserves_raw_ocr(self, image_to_data):
+        image_to_data.return_value = {"text": ["Tota1", "100.00"], "block_num": [1, 1], "par_num": [1, 1], "line_num": [1, 1], "left": [1, 40], "top": [1, 1], "width": [35, 40], "height": [10, 10], "conf": [20, 20]}
+        cleaner = Mock()
+        cleaner.clean.return_value = "Total 100.00"
+        page = TesseractOCR(cleaner=cleaner).read_page(Image.new("RGB", (100, 30), "white"), 1)
+        self.assertEqual([block.source for block in page.text_blocks], ["ocr", "ocr_cleanup_candidate"])
+        self.assertEqual(page.text_blocks[0].text, "Tota1 100.00")
+        self.assertEqual(page.text_blocks[1].text, "Total 100.00")
+        self.assertIn("ocr_cleanup", page.methods)
+        self.assertIn("OCR_CLEANUP_CANDIDATE", [warning.code for warning in page.warnings])
 
 
 if __name__ == "__main__":

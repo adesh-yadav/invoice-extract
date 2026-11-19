@@ -4,11 +4,12 @@ from dataclasses import dataclass
 from typing import Literal
 from langchain_core.language_models.chat_models import BaseChatModel
 
-Provider = Literal["openai", "anthropic", "ollama"]
+Provider = Literal["openai", "anthropic", "ollama", "google"]
 DEFAULT_MODELS: dict[str, str] = {
     "openai": "gpt-4.1-mini",
     "anthropic": "claude-haiku-4-5-20251001",
     "ollama": "gemma3:4b",
+    "google": "gemini-2.5-flash",
 }
 
 
@@ -18,6 +19,7 @@ class ModelConfig:
     model: str
     openai_api_key: str = ""
     anthropic_api_key: str = ""
+    google_api_key: str = ""
     ollama_base_url: str = "http://ollama:11434"
 
     @property
@@ -30,6 +32,8 @@ class ModelConfig:
             return bool(self.openai_api_key.strip())
         if self.provider == "anthropic":
             return bool(self.anthropic_api_key.strip())
+        if self.provider == "google":
+            return bool(self.google_api_key.strip())
         return True
 
 
@@ -47,4 +51,9 @@ def create_chat_model(config: ModelConfig) -> BaseChatModel:
     if config.provider == "ollama":
         from langchain_ollama import ChatOllama
         return ChatOllama(model=config.resolved_model, base_url=config.ollama_base_url, temperature=0, num_ctx=8192, num_predict=4096, client_kwargs={"timeout": 300.0})
+    if config.provider == "google":
+        if not config.google_api_key.strip():
+            raise ValueError("GOOGLE_API_KEY_MISSING")
+        from langchain_google_genai import ChatGoogleGenerativeAI
+        return ChatGoogleGenerativeAI(model=config.resolved_model, google_api_key=config.google_api_key, timeout=90, max_retries=1)
     raise ValueError("UNSUPPORTED_LLM_PROVIDER")

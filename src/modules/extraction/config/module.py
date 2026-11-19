@@ -19,32 +19,46 @@ from src.modules.extraction.adapters.outbound.ai.provider_factory import ModelCo
 from dataclasses import replace
 
 
-def build_process_job(extractor=None) -> LangGraphProcessor:
+def build_process_job(extractor=None, event_sink=None) -> LangGraphProcessor:
     model_config = ModelConfig(
         provider=settings.LLM_PROVIDER,
         model=settings.EXTRACTION_MODEL,
         openai_api_key=settings.OPENAI_API_KEY,
         anthropic_api_key=settings.ANTHROPIC_API_KEY,
+        google_api_key=settings.GOOGLE_API_KEY,
         ollama_base_url=settings.OLLAMA_BASE_URL,
     )
     chat_model = create_chat_model(model_config) if model_config.ready else None
     vision = None
+    vision_provider = settings.VISION_PROVIDER or model_config.provider
+    vision_model_name = settings.VISION_MODEL or (model_config.model if vision_provider == model_config.provider else "")
+    vision_config = replace(model_config, provider=vision_provider, model=vision_model_name)
     if settings.ENABLE_VISION_FALLBACK:
         from src.modules.extraction.adapters.outbound.ai.vision_transcriber import LangChainVisionTranscriber
-        vision_provider = settings.VISION_PROVIDER or model_config.provider
-        vision_model_name = settings.VISION_MODEL or (model_config.model if vision_provider == model_config.provider else "")
-        vision_config = replace(model_config, provider=vision_provider, model=vision_model_name)
         if vision_config.ready:
             vision_model = chat_model if vision_config == model_config else create_chat_model(vision_config)
             vision = LangChainVisionTranscriber(vision_model, vision_config.provider)
-    ocr = TesseractOCR(languages=settings.OCR_LANGUAGES, vision=vision, max_pixels=settings.MAX_IMAGE_PIXELS)
+    cleanup = None
+    cleanup_provider = settings.OCR_CLEANUP_PROVIDER or model_config.provider
+    cleanup_config = replace(model_config, provider=cleanup_provider, model=settings.OCR_CLEANUP_MODEL)
+    if settings.ENABLE_OCR_CLEANUP and cleanup_config.ready:
+        from src.modules.extraction.adapters.outbound.ai.ocr_cleaner import LangChainOCRCleaner
+        cleanup_model = chat_model if cleanup_config == model_config else create_chat_model(cleanup_config)
+        cleanup = LangChainOCRCleaner(cleanup_model)
+    ocr = TesseractOCR(languages=settings.OCR_LANGUAGES, vision=vision, cleaner=cleanup, max_pixels=settings.MAX_IMAGE_PIXELS)
     image = ImageReader(ocr)
     docx = DocxReader(ocr)
     pdf = PdfReader(ocr, max_pages=settings.MAX_PDF_PAGES)
     if extractor is None and chat_model is not None:
         from src.modules.extraction.adapters.outbound.ai.langchain_extractor import LangChainExtractor
         extractor = LangChainExtractor(chat_model, model_config.resolved_model)
-    return LangGraphProcessor({".jpg": image, ".jpeg": image, ".png": image, ".docx": docx, ".pdf": pdf}, extractor, settings.ARTIFACT_DIR)
+    model_info = {
+        "extraction": {"provider": model_config.provider, "model": model_config.resolved_model, "configured": model_config.ready},
+        "vision": {"provider": vision_config.provider, "model": vision_config.resolved_model, "configured": vision is not None},
+        "ocr_cleanup": {"provider": cleanup_config.provider, "model": cleanup_config.resolved_model, "configured": cleanup is not None},
+        "ocr": {"engine": "tesseract", "languages": settings.OCR_LANGUAGES},
+    }
+    return LangGraphProcessor({".jpg": image, ".jpeg": image, ".png": image, ".docx": docx, ".pdf": pdf}, extractor, settings.ARTIFACT_DIR, event_sink=event_sink, model_info=model_info)
 
 
 def get_submit_extraction(session: Session = Depends(get_db_session)) -> SubmitExtraction:
@@ -52,7 +66,7 @@ def get_submit_extraction(session: Session = Depends(get_db_session)) -> SubmitE
 
 
 def get_get_extraction(session: Session = Depends(get_db_session)) -> GetExtraction:
-    return GetExtraction(SqlAlchemyJobRepository(session))
+    return GetExtraction(SqlAlchemyJobRepository(session), LocalCDRStore(settings.ARTIFACT_DIR))
 
 
 def get_retry_extraction(session: Session = Depends(get_db_session)) -> RetryExtraction:
